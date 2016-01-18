@@ -334,46 +334,6 @@ border: 1px solid rgba(255, 255, 255, 0);border-radius: 20em;}
 	.gallery a { width: 203px; height: 203px; transform: rotate(-45deg) translateX(-9px) translateY(-59px); }
 
 }
-@media (max-width: 400px) {
-	.navbar-default { padding-top: 15px; }
-	.navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
-	.navbar-brand {  width: 70%; margin: 0 auto; left: 0; right: 0; top: 0px;  padding-bottom: 0; height: 132px;}
-	h4 {font-size: 1.2em;}
-	#video-bg {
-    width: 170%;
-    margin-left: -15%;}
-    #banner {
-    height: 170px;}
-    .xl {
-    font-size: 3rem;}
-    #bar h3 {
-	font-size: 24px;
-    top: 30px;}
-    .item h3 div, #oven h2 div {
-    font-size: 14px;}
-    .gallery{padding: 0;}
-    .gallery ul {
-    padding-left: 34px;}
-    .gallery li {
-    width: 80px;
-    height: 80px;
-    margin: 0 29px 29px auto;}
-    .gallery a {
-    width: 150px;
-    height: 150px;}
-}
-@media (min-width: 768px) and (max-width: 1037px) {li#menu-item-23{margin-right: 300px;}}
-@media (min-width: 768px) and (max-width: 1037px) {
-	.navbar-default .navbar-nav>li>a{letter-spacing: 1px;}
-	.navbar-brand{width: 280px;margin-left: -144px;height: 134px;margin-top: 14px;}
-}
-@media (min-width: 768px) and (max-width: 852px) {.navbar-brand{margin-left: -114px;}}
-@media (min-width: 768px) and (max-width: 769px) {
-	.navbar-brand{margin-left: -140px;}
-	.post-10 .wp-post-image{display: none;}
-}
-@media (min-width: 992px){
-	#menu li{  min-height: 475px;}
-	#carousel .lh{font-size: 1.2em;}
-	.navbar-collapse.collapse{padding: 5px 0;}
-}
+@media (max-width: 400px) {}
+@media (min-width: 768px) and (max-width: 1037px) {}
+@media (min-width: 992px){}
