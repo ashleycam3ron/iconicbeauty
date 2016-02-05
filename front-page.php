@@ -1,12 +1,17 @@
 <?php get_header(); ?>
 
+<?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
 <div id="home" class="container-fluid">
 	<?php get_template_part('/template-parts/slider'); ?>
 
-    <section id="story" class="row">
-		<div class="col-xs-10 col-xs-offset-1">
-			<?php the_content(); ?>
-		</div>
+    <section id="intro" class="row">
+	    <h1 class="hidden"><?php bloginfo('name')?> – <?php bloginfo('description');?></h1>
+		<article>
+			<div class="content col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1"><?php the_content(); ?></div>
+			<div class="responsive-video col-xs-10 col-xs-offset-1 col-sm-10 col-md-offset-0 col-md-5">
+			  <iframe class="responsive-video iframe" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/rDh0i9UvKZc"></iframe>
+			</div>
+		</article>
     </section><!-- end .row -->
 
 	<?php // check if the flexible content field has rows of data

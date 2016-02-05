@@ -38,9 +38,6 @@ Text Domain: 	ashleycameron
 	.wp-caption p.wp-caption-text{font-size:11px;line-height:17px;margin:0;padding:0 4px 5px}
 	.screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute!important;height:1px;width:1px;overflow:hidden}
 	.screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto!important;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:700;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
-	.sticky{}
-	.gallery-caption{}
-	.bypostauthor{}
 
 /* !Selection */
 	::selection		{background:#ddd;color:#777;}
@@ -60,22 +57,24 @@ Text Domain: 	ashleycameron
 
 /* !01 Structure */
 	* 	 {margin: 0;padding: 0; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
-	body {font-family:Helvetica, Arial, sans-serif;font-size:16px;color:#333;}
+	body {font-family: 'Raleway',Helvetica, Arial, sans-serif;font-size:14px;color:#333;border: 20px solid #000;}
+	body#tinymce{border: 0 !important;}
 	.entry {padding-bottom: 5%;}
 	.inverse{background: black;color: white;padding-top:1.5%;padding-bottom: 2%;}
 
 
 /* !02 Typography */
-	h1{font-size: 32px;}
+	h1 {
+	    font-size: 60px;
+	    text-align: center;
+	    margin: 0 auto 40px;
+	}
 	h2{font-size: 28px;}
 	h3{font-size: 24px;}
 	h4{font-size: 18px;}
 	h5{font-size: 16px;}
 	h6{font-size: 14px;}
-	h1,h2,h3,h4{text-transform: uppercase;}
-	.xl	{font-size: 4rem;}
-	.lg {font-size: x-large;margin-bottom: 10px;display: block;}
-	.lh {line-height: 2;}
+	h1,h2,h3,h4{text-transform: uppercase;font-family: 'Old Standard TT', serif;}
 	p {margin: 0 0 14px;line-height: 1.75;}
 	blockquote	{}
 	li {list-style-position: inside;}
@@ -150,15 +149,119 @@ Text Domain: 	ashleycameron
 			margin:0!important;max-width:100%}
 
 /* !Header */
-	#header {}
-	.navbar-brand {width: 120px; height: 150px;line-height: 1;font-size: 0;text-indent: -999em; padding: 0;position: relative;z-index: 1;}
+	#header {padding-bottom: 60px;}
+	.home #header {
+    position: absolute;
+    width: 100%;
+}
+	#subscribe {text-align: center;position: relative;background: #000;padding-bottom: 5px;}
+	#subscribe h6{font: 13px/6px 'Quicksand',sans-serif;
+    margin: 0;
+    color: #e4788e;
+    text-transform: uppercase;
+    letter-spacing: .2em;}
+    #subscribe small {
+    color: #777;
+    letter-spacing: .08em;
+    font-size: 11px;
+}
+	#subscribe nav{position: absolute;right: 0;top:-17px;}
+	.navbar-brand {width: 310px; height: 50px; line-height: 1; padding: 0; float: none; display: block; margin: 20px auto 0;}
 	#site-description{width: 39%;float: right;padding: 4px 30% 0 0;font-size: 13px;font-style:italic;line-height:15px;color:#DDD;}
 
-/* !Carousel */
-	#feature *{color: white;}
-	#feature{background: url(images/bg-wood.jpg) repeat;padding-top: 5%;padding-bottom:1%;}
-	#archive{background: url(images/bg-wood.jpg) repeat;padding-top: 2%;}
-	.carousel-control.right,.carousel-control.left{background: transparent;}
+/* !Home */
+#intro article > p:first-of-type:first-letter {
+	float: left;
+  margin: 0 0.1em 0 0;
+  font-size: 3.5em;
+  line-height: .7em;
+  display: block;
+  padding: .1em;
+  color: #999;
+}
+
+/* !Video */
+.responsive-video { position: relative;overflow: hidden;min-height: 300px;}
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* !Single Model */
+	.bio h2,
+	#inspiration h2{font-style: italic;}
+
+	/* !Bio */
+		.bio h2 {
+		    letter-spacing: .04em;
+		    font-size: 34px;
+		    margin: 20px 0 10px;
+		}
+		.bio img{
+			border: 1px solid #ddd;
+			padding: 5px;
+		}
+	/* 	!Connect */
+		#social h3 {
+		    float: left;
+		    text-transform: uppercase;
+		    color: #FFC0CB;
+		    font-size: 14px;
+		    letter-spacing: .15em;
+		    margin: 0 15px 0 0;
+		}
+		#social li{display: inline-block;}
+		#social a{display:block;width: 16px;height: 16px;background: black;text-indent: -999em;}
+
+
+	/* !Real Life Me */
+		#real h2 {
+		    text-align: center;
+		    letter-spacing: .28em;
+		    font-size: 17px;
+		    border: 1px solid #a18f45;
+		    width: 250px;
+		    padding: 10px 20px;
+		    margin: 14px auto;
+		    color: #a18f45;
+		    background: white;
+		}
+		#real figcaption {
+		    background: #eee;
+		    font-size: 85%;
+		    text-align: center;
+		    padding: 14px 30px;
+		}
+	/* !Inspiration */
+		.images img{
+			width: 24.25%;
+		    height: auto;
+		    float: left;
+		    margin: 0 1% 1% 0;}
+		.images :nth-child(4n){margin: 0;}
+
+/* !Image Carousel (Model) */
+	.slides{position: relative;}
+
+	ol.carousel-indicators {
+	    top: 20px;
+	    left: -50px;
+	    width: 25px;
+	    margin: 0;}
+    .carousel-indicators li {
+	    text-indent: 0;
+	    width: auto;
+	    height: auto;
+	    color: #000;
+	    display: block;
+	    background: rgba(0, 0, 0, 0);
+	    border: 0;
+	    line-height: 2.5;
+	}
+	.carousel-indicators .active {
+	    width: auto;
+	    height: auto;
+	    color: #A59B68;
+	}
 	.item div { opacity: 0; }
 	.item img.wp-post-image {margin: auto;}
 	.item h3{opacity: 0;}
@@ -168,7 +271,6 @@ Text Domain: 	ashleycameron
 		-moz-transition: opacity .5s ease-in-out;
 		-webkit-transition: opacity .5s ease-in-out;
 		opacity: 1;}
-	.featuring{padding-top: 30px;}
 	.arrow-prev {left: 15px;}
 	.arrow-prev,
 	.arrow-next{background: url(images/prev.png) no-repeat;width:60px;height:100px;top: 40%;position: absolute;}
@@ -179,22 +281,28 @@ Text Domain: 	ashleycameron
 	.fancybox-prev span{background: url(images/prev.png) 10px center no-repeat;left:-90px;}
 	.fancybox-close{background: url(images/close.png) center no-repeat rgba(0,0,0,.2);height:50px;width:50px;top:0;right: 0;background-size:50%;}
 
-	.item img, #footer img{ margin: auto; }
+	.item img{ margin: auto; }
 
 
 /* !Navigation  */
-.navbar-default .navbar-collapse {
-  border: 0;
-  background-color: #FFF;
-}
-.navbar-default .navbar-nav>li>a {
-  color: #222;
-  text-transform: uppercase;
-}
+nav ul{margin: 0;}
+.navbar-default .navbar-collapse {border: 0;}
+
 .menu {list-style: none;}
-.navbar-default {  margin-bottom: 0;background-color: rgba(0, 0, 0, 0);  padding-top: 54px;border: 0;}
-.navbar-nav>li {/* display: inline-block;float: none; */}
-.nav>li>a{padding: 10px 12px;}
+.navbar-default {  margin-bottom: 0;background-color: rgba(0, 0, 0, 0);border: 0;}
+.navbar-nav {
+    float: none;
+    text-align: center;
+}
+.navbar-nav>li {display: inline-block;float: none;}
+.navbar-default .navbar-nav>li>a {
+	font-family: 'Old Standard TT', serif;
+    padding: 10px 30px;
+    color: #4C4C4C;
+    font-size: 26px;
+    padding: 10px 20px;
+}
+.navbar-nav>li>a div{text-transform: uppercase;font-size: 10px;letter-spacing: .05em;font-family: sans-serif;}
 .navbar-default .navbar-toggle {
 	  border: 0;
 	  background-color: #000;
@@ -205,25 +313,13 @@ Text Domain: 	ashleycameron
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .current-menu-ancestor > a, .navbar-default .navbar-nav>li.current-menu-ancestor>a {
-  color: #15397f;background: transparent;
+  color: #e4788e;background: transparent;
 }
 .dropdown-menu { border-radius: 0; padding: 0; border: 0; box-shadow: none; }
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {background-color:#FF7472;}
 .dropdown-menu>li>a {padding: 10px 20px;}
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{background: transparent;color:#FF7472;}
 
-/* !Flexslider */
-	.flexslider{background:black;z-index: 1;overflow: hidden;max-height: 280px;}
-	.flex-control-nav{padding-bottom: 10px;margin-bottom: 0;}
-	.flex-control-nav li{display:inline-block;}
-	.flex-control-paging li a{width: 24px;height: 24px;display: block;font-size: 15px;line-height: 22px;color: #FFF;
-border: 1px solid rgba(255, 255, 255, 0);border-radius: 20em;}
-	.flex-control-paging li a.flex-active{color: #ff7472;border-color: #ff7472;}
-	.flexslider .slides{list-style: none;}
-	.flexslider .slides li{float: left;width: 180px;background: #ff7472;}
-	.flexslider .slides img { max-width: 1140px; width: inherit; }
-	.flexslider .slides li:hover img{opacity: .8;}
-	.flexslider.f01 .slides img {  max-width: 100%;  height: auto;margin: auto;}
 
 /* !Search */
 	#searchform{position: relative;margin: 12px 0 0;  padding: 0;}
@@ -267,27 +363,46 @@ border: 1px solid rgba(255, 255, 255, 0);border-radius: 20em;}
 	.gallery a img { width: 100%; height: auto;}
 
 /* !Social */
-	.social h5{text-transform:uppercase;text-align:center;margin: 2px 7px 5px;color: #777;font-size: 13px;letter-spacing: .1em;}
-	.social li {display: inline-block}
-	.social li a{width:17px;height:19px;display: block;  margin: 7px;background:url(images/connect.png) no-repeat 2px 2px;text-indent:-9999px;font-size:0;}
-	.social li a:hover{}
-	.social li.facebook a 	{background-position:6px 0px;}
-	.social li.twitter a	{background-position:-31px 0;}
-	.social li.RSS			{background-position:-107px 0;}
-	.social li.instagram a	{background-position:-67px 0;}
-	.social li.google a		{background-position:-104px 0;}
-	.social li.yelp a		{background-position:-139px 0;}
+	#menu-social {opacity: .6;}
+	#footer #menu-social-1 {
+    margin: 18px auto 0px;
+    opacity: .5;
+}
+	#menu-social li { display: inline-block;}
+	#menu-social a, #menu-social-1 a{width:19px;height:19px;display: block;margin: 0 11px 0 0;background:url(images/connect.png) no-repeat 5px 1px;text-indent:-9999px;font-size:0;}
+	#menu-social li {display: inline-block}
+	#menu-social li a:hover{opacity: .9}
+	#menu-social li.facebook a,
+	#menu-social-1 li.facebook a,{background-position:5px 1px;}
+	#menu-social li.twitter a,
+	#menu-social-1 li.twitter a  {background-position:-34px 1px;}
+	#menu-social li.instagram a,
+	#menu-social-1 li.instagram a{background-position:-73px 1px;}
+	#menu-social li.youtube a,
+	#menu-social-1 li.youtube a	 {background-position:-112px 1px;}
+	#menu-social li.google a,
+	#menu-social-1 li.google a	 {background-position:-151px 1px;}
+	#menu-social li.rss a,
+	#menu-social-1 li.rss a		 {background-position:-184px 1px;}
 
 /* !Footer  */
 	.copyright { padding: 18px 25px 0; font-size: 1.2rem; margin-bottom: 0; clear: both;}
-	#footer{background: white;  position: relative;text-align: center;border-top: 1px solid #ccc;padding-top: 15px;}
+	#footer{background: #000; position: relative;text-align: center;border-top: 1px solid #ccc;}
 	#footer span {padding:0 8px;}
 	address{margin: 0 auto;}
-	#footer h3 {margin-bottom: 0;}
-	#footer h4 { font-size: 95%; line-height: 1.5;}
 	#footer .menu{margin: 0;}
-	small { color: #8C8C8C; margin: 5px 0 20px; display: block; }
-	small a {font-size: 11px;letter-spacing: .02em;}
+	#footer nav a {color: #ccc; text-transform: uppercase; padding: 5px 13px; font-size: 12px; letter-spacing:.17em; }
+	#footer img { max-width: 230px; margin: 20px auto 12px; }
+	.menu li{display: inline-block;}
+	#footer nav li a div{display: inline-block;}
+	#footer .gradient{height:4px;}
+	.gradient{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e84ca2+0,ed7067+50,f8c53c+100 */
+		background: #e84ca2;
+		background: -moz-linear-gradient(left,  #e84ca2 0%, #ed7067 50%, #f8c53c 100%);
+		background: -webkit-linear-gradient(left,  #e84ca2 0%,#ed7067 50%,#f8c53c 100%);
+		background: linear-gradient(to right,  #e84ca2 0%,#ed7067 50%,#f8c53c 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e84ca2', endColorstr='#f8c53c',GradientType=1 );
+		}
 
 /* 	!Mobile styles */
 @media (min-width: 768px){}

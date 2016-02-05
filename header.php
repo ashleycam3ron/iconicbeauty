@@ -15,6 +15,7 @@
 	<meta name="dc.subject" CONTENT="<?php bloginfo('description');?>">
 	<meta name="dc.creator" content="Minnow Project">
 	<title><?php echo wp_title();?></title>
+	<link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700|Raleway:400,700|Quicksand' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" />
     <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon-192.png">
     <link rel="image_src" href="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" />
@@ -24,8 +25,16 @@
 	<h3 class="hidden"><?php bloginfo('name')?> – <?php bloginfo('description');?></h3>
 
 <header id="header" role="banner">
+	<div id="subscribe">
+		<h6>Subscribe & Follow Us</h6>
+		<small>Follow your dreams and join our growing team</small>
+		<nav>
+			<h4 class="hidden">Connect on social media</h4>
+			<?php wp_nav_menu( array( 'menu' => 'social') ); ?>
+		</nav>
+	</div>
 	<a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>">
-		<img class="img-responsive" src="<?php echo get_stylesheet_directory_uri() ?>/images/x-logo.png" alt="x logo">
+		<img class="img-responsive" src="<?php echo get_stylesheet_directory_uri() ?>/images/Iconic-Beauty-logo.png" alt="<?php bloginfo('name')?> logo">
 	</a>
 	<nav class="navbar navbar-default" role="navigation">
 		<h2>Primary Navigation</h2>
