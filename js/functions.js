@@ -1,12 +1,3 @@
-// sticky menu
-/*
-jQuery(document).ready(function() {
-    if(window.matchMedia('(min-width: 768px)').matches) {
-        jQuery(".sticky").sticky({topSpacing:0});
-    }
-});
-*/
-
 jQuery(".fancybox, .gallery a").fancybox({
 	padding: 0,
 	helpers:  {
@@ -21,6 +12,16 @@ jQuery('p').each(function() {
     var $this = $(this);
     if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
         $this.remove();
+});
+
+//hide title tags in links
+jQuery('a').hover(function(e){
+    jQuery(this).attr('data-title', jQuery(this).attr('title'));
+    jQuery(this).removeAttr('title');
+},
+function(e){
+    jQuery(this).attr('title', jQuery(this).attr('data-title'));
+
 });
 
 //bootstrap for mobile
