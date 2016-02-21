@@ -18,7 +18,7 @@
 	<meta name="dc.subject" CONTENT="<?php bloginfo('description');?>">
 	<meta name="dc.creator" content="Minnow Project">
 	<title><?php echo wp_title();?></title>
-	<link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700|Raleway:400,700|Quicksand' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700|Raleway:400,700|Cinzel:400' rel='stylesheet' type='text/css'>
 	<link rel="alternate" href="http://iconicbeauty.com" hreflang="en-us" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" />
     <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon-192.png">
@@ -28,7 +28,7 @@
 <body <?php body_class(); ?>>
 	<h3 class="hidden"><?php bloginfo('name')?> – <?php bloginfo('description');?></h3>
 
-<header id="header" role="banner">
+<header id="header" role="banner" class="row">
 	<div id="subscribe">
 		<h6>Subscribe & Follow Us</h6>
 		<small>Follow your dreams and join our growing team</small>

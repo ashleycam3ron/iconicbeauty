@@ -2,20 +2,22 @@
 
 <?php the_post_thumbnail('full',array('class' => 'feature')); ?>
 <div id="home" class="container-fluid">
-	<?php get_template_part('/template-parts/slider'); ?>
-
     <section id="intro" class="row">
 	    <h1 class="hidden"><?php bloginfo('name')?> – <?php bloginfo('description');?></h1>
 		<article>
-			<div class="content col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1"><?php the_content(); ?></div>
+			<div class="col-xs-10 col-xs-offset-1">
+				<?php if (get_field('title')){ ?><h2><?php the_field('title'); ?></h2><?php } ?>
+				<?php if (get_field('subheading')){ ?><h3><span><?php the_field('subheading'); ?></span></h3><?php } ?>
+			</div>
+			<div class="content col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+				<?php the_content(); ?></div>
 			<div class="responsive-video col-xs-10 col-xs-offset-1 col-sm-10 col-md-offset-0 col-md-5">
 			  <iframe class="responsive-video iframe" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/rDh0i9UvKZc"></iframe>
 			</div>
 		</article>
     </section><!-- end .row -->
 
-	<?php // check if the flexible content field has rows of data
-		if( have_rows('custom_layouts') ):
+	<?php if( have_rows('custom_layouts') ):
 		    while ( have_rows('custom_layouts') ) : the_row();
 				$image = get_sub_field('image');
 		        if( get_row_layout() == '2_col_1' ): ?>
@@ -38,24 +40,5 @@
 		    // no layouts found
 		endif; ?>
 </div>
-
-<script>
-	jQuery(function($){
-		jQuery('#carousel').carousel({
-		    interval: false
-		});
-	});
-
-<?php if ( wp_is_mobile() ) { ?>
-	jQuery(document).ready(function() {
-	   jQuery("#carousel").swiperight(function() {
-	      jQuery(this).carousel('prev');
-	    });
-	   jQuery("#carousel").swipeleft(function() {
-	      jQuery(this).carousel('next');
-	   });
-	});
-<?php } ?>
-</script>
 
 <?php get_footer(); ?>

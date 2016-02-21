@@ -105,7 +105,7 @@ Text Domain: 	ashleycameron
 	a:active {color:#900;text-decoration: none;}
 
 /* !04 Buttons */
-	.btn-default {border: 2px solid;border-radius: 0;}
+	.btn-default {border: 1px solid; border-radius: 0; padding: 15px 28px; text-transform: uppercase; letter-spacing: .2em; font-weight: 800; font-size: 93%; display: inline-block; }
 	.btn-default.active,
 	.btn-default.focus,
 	.btn-default:active,
@@ -164,11 +164,8 @@ Text Domain: 	ashleycameron
 			margin:0!important;max-width:100%}
 
 /* !Header */
-	#header {padding-bottom: 60px;}
-	.home #header {
-    position: absolute;
-    width: 100%;
-}
+	#header {padding-bottom: 60px;max-width: 100%;margin: auto;}
+	.home #header {position: absolute; width: 100%;left: 0;}
 	#subscribe {text-align: center;position: relative;background: #000;padding-bottom: 5px;}
 	#subscribe h6{font: 13px/6px 'Quicksand',sans-serif;
     margin: 0;
@@ -181,18 +178,22 @@ Text Domain: 	ashleycameron
     font-size: 11px;
 }
 	#subscribe nav{position: absolute;right: 16px;top: -15px;}
-	.navbar-brand {width: 310px; height: 50px; line-height: 1; padding: 0; float: none; display: block; margin: 40px auto 0;}
+	.navbar-brand {width: 310px; height: 50px; line-height: 1; padding: 0; float: none; display: block; margin:30px auto 2%;}
 	#site-description{width: 39%;float: right;padding: 4px 30% 0 0;font-size: 13px;font-style:italic;line-height:15px;color:#DDD;}
 
 /* !Home */
-#intro article > p:first-of-type:first-letter {
+#intro .content > p:first-of-type:first-letter {
 	float: left;
-  margin: 0 0.1em 0 0;
-  font-size: 3.5em;
-  line-height: .7em;
-  display: block;
-  padding: .1em;
-  color: #999;
+    margin: 0 4px 0 -10px;
+    font-size: 54px;
+    line-height: .7em;
+    display: block;
+    padding: 0;
+    color: #D4D4D4;
+    font-family: 'Cinzel', serif;
+}
+#intro .content {
+    padding-right: 30px;margin-bottom: 50px;
 }
 
 /* !Video */
@@ -223,18 +224,19 @@ Text Domain: 	ashleycameron
 		    margin: 0 15px 0 0;
 		}
 		#social li{display: inline-block;}
-		#social a{display:block;width: 16px;height: 16px;background: url(images/connect.png) no-repeat 4px -36px;text-indent: -999em;margin: 0 4px;}
+		#social a{display:block;width: 16px;height: 16px;background: url(images/connect.png) no-repeat 4px -36px;text-indent: -999em;margin: 0 4px;opacity: .7;}
 		#social a.twitter{background-position: -36px -36px;}
 		#social a.instagram{background-position: -74px -36px;}
 		#social a.youtube{background-position: -113px -36px;}
 		#social a.google{background-position: -152px -36px;}
-		#social a.email{background-position: -185px -36px;}
+		#social a.email{background-position: -221px -37px;}
 
 
 	/* !Real Life Me */
 		#real {margin-top: 50px;}
 		#real > div {margin-bottom: 15px;}
-		#real h2 {
+		#real h2,
+		.home h3 {
 			font-family: 'Raleway', Helvetica, Arial, serif;font-style: normal;
 		    text-align: center;
 		    letter-spacing: .28em;
@@ -245,13 +247,19 @@ Text Domain: 	ashleycameron
 		    position: relative;
 			z-index: 1;
 		}
+		.home h3 {
+		    text-align: left;
+		    padding-left:12px;font-size: 14px;
+		    margin: 0 -15px 30px 0;
+		}
 		#real figcaption {
 		    background: #eee;
 		    font-size: 85%;
 		    text-align: center;
 		    padding: 14px 30px;
 		}
-		#real h2:before {
+		#real h2:before,
+		.home h3:before {
 		  border-top: 1px solid #a18f45;
 		  content: "";
 		  margin: 0 auto;
@@ -263,11 +271,14 @@ Text Domain: 	ashleycameron
 		  width: 95%;
 		  z-index: -1;
 		}
-		#real h2 span {
+		.home h3:before {width: 100%;top: 8px;}
+		#real h2 span{
 		  background: #fff;
 		  padding: 10px 35px;
 		  border: 1px solid #a18f45;
 		}
+		.home h3 span{background: white;padding: 0 8px;}
+
 
 	/* !Inspiration */
 		#inspiration { margin-top: 35px;}
@@ -384,11 +395,11 @@ nav ul{margin: 0;}
 .navbar-nav>li {display: inline-block;float: none;}
 .navbar-default .navbar-nav>li>a {
 	font-family: 'Old Standard TT', serif;
-    padding: 10px 30px;
+    padding: 0px 30px;
     color: #4C4C4C;
     font-size: 23px;
 }
-.navbar-nav>li>a div{text-transform: uppercase;font-size: 9.5px;
+.navbar-nav>li>a div{text-transform: uppercase;font-size: 9.5px;margin-top: -20px;
     letter-spacing: .08em;
     font-family: sans-serif;
     line-height: 1.25;}
@@ -431,12 +442,13 @@ nav ul{margin: 0;}
 	#sidebar h2:before { right: 4%; }
 	#sidebar h2:after { left: 4%; }
 /* !Home */
-.home img.feature{width: 100%;height: auto;}
+	.home img.feature{width: 100%;height: auto;margin-top: 4%;}
+	.home h2{font-family: 'Cinzel', serif;font-style: normal;color: #4d4d4d;letter-spacing: .1em;font-size: 40px;margin: 50px 0 8px;}
 
 /* !Blog */
-#blog .post{padding: 0;}
-#blog .post img{min-width: 100%;}
-.sticky{padding: 0;}
+	#blog .post{padding: 0;}
+	#blog .post img{min-width: 100%;}
+	.sticky{padding: 0;}
 /*
 .item { width: 25%; }
 .item.w2 { width: 50%; }
