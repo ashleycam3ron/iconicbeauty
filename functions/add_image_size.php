@@ -14,6 +14,6 @@ add_image_size('iphone', 114, 114, true);
 add_image_size('square_large', 300, 300, true);
 */
 // cropped
-//add_image_size('feature', 450, 300, true);
 add_image_size('headshot', 350, 350, true);
+add_image_size('vertical', 390, 585, true);
 ?>

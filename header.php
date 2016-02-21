@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-language" content="<?php bloginfo('language'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#000">
     <meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#f9b3d1"><!-- Chrome, Firefox OS and Opera -->
+	<meta name="msapplication-navbutton-color" content="#f9b3d1"><!-- Windows Phone -->
+	<meta name="apple-mobile-web-app-capable" content="yes"><!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="author" content="<?php bloginfo('name'); ?>">
     <meta name="copyright" content="Copyright <?php bloginfo('name');?> <?php echo date('Y');?>. All Rights Reserved.">
     <meta name="dc.language" CONTENT="US">
@@ -29,7 +32,7 @@
 	<div id="subscribe">
 		<h6>Subscribe & Follow Us</h6>
 		<small>Follow your dreams and join our growing team</small>
-		<nav>
+		<nav class="hidden-xs">
 			<h4 class="hidden">Connect on social media</h4>
 			<?php wp_nav_menu( array( 'menu' => 'social') ); ?>
 		</nav>

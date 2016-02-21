@@ -6,97 +6,108 @@
 
 		<div class="row">
 			<h1>Meet <?php the_title();?></h1>
-			<article class="bio col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4">
-				<?php if( has_post_thumbnail()){
-					the_post_thumbnail('headshot', array( 'class' => 'img-circle img-responsive'));
-				} else { ?>
-				<img class="img-responsive img-circle" src="http://placehold.it/330x330" alt="<?php the_title();?> Headshot">
+			<article class="bio col-xs-10 col-xs-offset-1 col-sm-5 col-md-4 col-lg-offset-0">
+				<?php
+					$image = get_field('headshot');
+					if( !empty($image) ):
+						$url = $image['url'];
+						$title = $image['title'];
+						$alt = $image['alt'];
+						$caption = $image['caption'];
+
+						// thumbnail
+						$size = 'headshot';
+						$headshot = $image['sizes'][ $size ];
+					endif; ?>
+				<?php if( get_field('headshot')){ ?>
+					<img class="img-circle img-responsive" src="<?php echo $headshot; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+				<?php } else { ?>
+					<img class="img-responsive img-circle" src="http://placehold.it/350x350/efefef/A18F45" alt="<?php the_title();?> Headshot">
 				<?php } ?>
 				<h2>Biography</h2>
-				<p>A woman has the age she deserves. A girl should be two things: classy and fabulous. Some people think luxury is the opposite of poverty. It is not. It is the opposite of vulgarity. Elegance is not the prerogative of those who have just escaped from adolescence, but of those who have already taken possession of their future. Fashion is not something that exists in dresses only. Fashion is in the sky, in the street, fashion has to do with ideas, the way we live, what is happening.</p>
-				<p>Elegance is not the prerogative of those who have just escaped from adolescence, but of those who have already taken possession of their future. A woman has the age she deserves. A girl should be two things: classy and fabulous. Fashion is not something that exists in dresses only. Fashion is in the sky, in the street, fashion has to do with ideas, the way we live, what is happening. Fashion fades, only style remains the same.</p>
+				<?php $thecontent = get_the_content();
+					  if(!empty($thecontent)) { the_content(); } else { ?>Biography here. <?php } ?>
 				<nav id="social">
 					<h3>Connect</h3>
 					<ul>
-						<li><a class="facebook" target="_blank" href="#">facebook</a></li>
-						<li><a class="twitter" target="_blank" href="#">twitter</a></li>
-						<li><a class="instagram" target="_blank" href="#">instagram</a></li>
-						<li><a class="youtube" target="_blank" href="#">youtube</a></li>
-						<li><a class="google" target="_blank" href="#">google+</a></li>
-						<li><a class="email" target="_blank" href="#">contact</a></li>
+						<?php if (get_field('facebook')){ ?><li><a class="facebook" target="_blank" href="<?php the_field('facebook'); ?>">facebook</a></li><?php } ?>
+						<?php if (get_field('twitter')){ ?><li><a class="twitter" target="_blank" href="<?php the_field('twitter'); ?>">twitter</a></li><?php } ?>
+						<?php if (get_field('instagram')){ ?><li><a class="instagram" target="_blank" href="<?php the_field('instagram'); ?>">instagram</a></li><?php } ?>
+						<?php if (get_field('youtube')){ ?><li><a class="youtube" target="_blank" href="<?php the_field('youtube'); ?>">youtube</a></li><?php } ?>
+						<?php if (get_field('google')){ ?><li><a class="google" target="_blank" href="<?php the_field('google'); ?>">google+</a></li><?php } ?>
+						<?php if (get_field('email')){ ?><li><a class="email" target="_blank" href="mailto:<?php the_field('email'); ?>">contact</a></li><?php } ?>
 					</ul>
 				</nav>
 			</article>
-			<article class="slides col-xs-10 col-xs-offset-1 col-sm-7">
-				<h2 class="hidden">Featured Images</h2>
-			<?php if( have_rows('img_carousel') ):
-				$count = 0; ?>
-				<div id="carousel" class="carousel slide">
-					<ol class="carousel-indicators">
-			          <?php while( have_rows('img_carousel') ): the_row(); ?>
-			            <li <?php if ( $count == 0){ echo 'class="active"';} ?> data-target="#carousel" data-slide-to="<?php echo $count++; ?>"><?php echo $count; ?></li>
-			          <?php endwhile;  wp_reset_postdata(); ?>
-			        </ol>
-					<div class="carousel-inner">
-						<?php $count = 0; while( have_rows('img_carousel') ): the_row();
-							$image = get_sub_field('image'); ?>
-
-							<div class="item <?php if ( $count == 0){ echo 'active';};?>" data-slide-number="<?php echo $count++;?>">
-								<img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-							</div>
-						<?php endwhile; wp_reset_postdata(); ?>
-					</div>
-					<a class="carousel-control prev" href="#carousel" data-slide="prev"></a>
-					<a class="carousel-control next" href="#carousel" data-slide="next"></a>
-				</div>
-			<?php endif; ?>
-			<blockquote><?php the_field('quote'); ?>In order to be irreplaceable one must always be different. Fashion fades, only style remains the same. A girl should be two things: classy and fabulous. Fashion fades, only style remains the same. Elegance is not the prerogative of those who have just escaped from adolescence, but of those who have already taken possession of their future. -Coco Chanel</blockquote>
-			<div class="clear"></div>
-		</article>
+			<?php get_template_part('/template-parts/model-slider'); ?>
 	</div>
 	<article id="real" class="row">
-		<h2>Real Life Me</h2>
-		<div class="col-md-4">
-			<img class="img-responsive" src="http://placehold.it/390x550" alt="">
-			<figcaption>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</figcaption>
-		</div>
-		<div class="col-md-4">
-			<img class="img-responsive" src="http://placehold.it/390x550" alt="">
-			<figcaption>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</figcaption>
-		</div>
-		<div class="col-md-4">
-			<img class="img-responsive" src="http://placehold.it/390x550" alt="">
-			<figcaption>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</figcaption>
-		</div>
-	</article>
-	<section id="inspiration" class="row">
-
-
-		<article class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4">
-			<h2>Headline</h2>
-			<h3>Subheading</h3>
-			<p>Some people think luxury is the opposite of poverty. It is not. It is the opposite of vulgarity. Some people think luxury is the opposite of poverty. It is not. It is the opposite of vulgarity. Fashion is always of the time in which you live. It is not something standing alone. But the grand problem, the most important problem, is to rejeuvenate women. To make women look young. Then their outlook changes. They feel more joyous. Luxury must be comfortable, otherwise it is not luxury. Fashion is not something that exists in dresses only. Fashion is in the sky, in the street, fashion has to do with ideas, the way we live, what is happening.</p>
-
-	<p>Fashion is always of the time in which you live. It is not something standing alone. But the grand problem, the most important problem, is to rejeuvenate women. To make women look young. Then their outlook changes. They feel more joyous. A girl should be two things: classy and fabulous. A woman has the age she deserves. A woman has the age she deserves. Fashion is made to become unfashionable.</p>
-		</article>
-		<article class="inspiration col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-8">
-			<h2>What makes me smile... & gives me inspiration.</h2>
-			<div class="images">
-				<img class="img-responsive" src="http://placehold.it/200x200" alt="">
-				<img class="img-responsive" src="http://placehold.it/200x200" alt="">
-				<img class="img-responsive" src="http://placehold.it/200x200" alt="">
-				<img class="img-responsive" src="http://placehold.it/200x200" alt="">
-				<img class="img-responsive" src="http://placehold.it/200x200" alt="">
-				<img class="img-responsive" src="http://placehold.it/200x200" alt="">
-				<img class="img-responsive" src="http://placehold.it/200x200" alt="">
-				<img class="img-responsive" src="http://placehold.it/200x200" alt="">
+		<h2><span>Real Life Me</span></h2>
+		<?php if( have_rows('real_life') ) { ?>
+			<?php while( have_rows('real_life') ): the_row();
+				$image = get_sub_field('real_image');
+				$vertical = $image['sizes']['vertical'];
+				$caption = $image['caption']; ?>
+			<div class="col-xs-6 col-sm-4 col-sm-offset-0">
+				<img class="img-responsive" src="<?php echo $vertical; ?>" alt="<?php echo $image['alt'] ?>" />
+				<?php if( $caption ): ?><figcaption><?php echo $image['caption']; ?></figcaption><?php endif; ?>
 			</div>
-		</article>
-		<?php the_content();?>
+			<?php endwhile; wp_reset_postdata(); ?>
+		<?php } else { ?>
+			<div class="col-xs-6 col-sm-4 col-sm-offset-0">
+				<img class="img-responsive" src="http://placehold.it/390x585/efefef/A18F45" alt="placeholder">
+				<figcaption>Caption here.</figcaption>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-sm-offset-0">
+				<img class="img-responsive" src="http://placehold.it/390x585/efefef/A18F45" alt="">
+				<figcaption>Caption here.</figcaption>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-sm-offset-0">
+				<img class="img-responsive" src="http://placehold.it/390x585/efefef/A18F45" alt="">
+				<figcaption>Caption here.</figcaption>
+			</div>
+		<?php } ?>
+	</article>
 
-		<?php endwhile;?>
+	<section id="inspiration" class="row">
+		<article class="col-xs-10 col-xs-offset-1 col-sm-5 col-md-4 col-lg-offset-0 ">
+			<?php if (get_field('content')){ ?>
+				<?php the_field('content'); ?>
+			<?php } else { ?>
+				<h2>Headline</h2>
+				<h3>Subheading</h3>
+				<p>Content Here</p>
+			<?php } ?>
+		</article>
+		<article class="inspiration col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0 col-lg-8">
+			<h2 class="smile">What makes me smile... <br/><span><span class="amp">&</span> gives me inspiration.</span></h2>
+			<?php if (get_field('inspiration')){ ?>
+				<section id="gallery" class="images">
+				 <?php $images = get_field('inspiration');
+					if( $images ): ?>
+		            <?php foreach( $images as $image ): ?>
+		            <img class="img-responsive" src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['title']; ?>" />
+		            <?php endforeach; ?>
+			    </section>
+				<?php endif; ?>
+			<?php } else { ?>
+				<div class="images">
+					<img class="img-responsive placeholder" src="http://placehold.it/200x200/eeeeee/A18F45" alt="placeholder">
+					<img class="img-responsive placeholder" src="http://placehold.it/200x200/eeeeee/A18F45" alt="placeholder">
+					<img class="img-responsive placeholder" src="http://placehold.it/200x200/eeeeee/A18F45" alt="placeholder">
+					<img class="img-responsive placeholder" src="http://placehold.it/200x200/eeeeee/A18F45" alt="placeholder">
+					<img class="img-responsive placeholder" src="http://placehold.it/200x200/eeeeee/A18F45" alt="placeholder">
+					<img class="img-responsive placeholder" src="http://placehold.it/200x200/eeeeee/A18F45" alt="placeholder">
+					<img class="img-responsive placeholder" src="http://placehold.it/200x200/eeeeee/A18F45" alt="placeholder">
+					<img class="img-responsive placeholder" src="http://placehold.it/200x200/eeeeee/A18F45" alt="placeholder">
+				</div>
+			<?php } ?>
+		</article>
 	</section>
-</div>
+	<?php get_template_part('/template-parts/models-carousel'); ?>
+
+	<?php endwhile;?>
+</section>
 <script>
 	jQuery(function($){
 		jQuery('#carousel').carousel({
@@ -106,10 +117,10 @@
 
 <?php if ( wp_is_mobile() ) { ?>
 	jQuery(document).ready(function() {
-	   jQuery("#carousel").swiperight(function() {
+	   jQuery("#carousel #mini-carousel").swiperight(function() {
 	      jQuery(this).carousel('prev');
 	    });
-	   jQuery("#carousel").swipeleft(function() {
+	   jQuery("#carousel #mini-carousel").swipeleft(function() {
 	      jQuery(this).carousel('next');
 	   });
 	});

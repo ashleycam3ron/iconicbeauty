@@ -24,6 +24,22 @@ function(e){
 
 });
 
+$(document).ready(function(){
+//back to top link
+  jQuery(window).scroll(function($){
+      if (jQuery(this).scrollTop() > 800) {
+          jQuery('.back-to-top').fadeIn();
+      } else {
+          jQuery('.back-to-top').fadeOut();
+      }
+  });
+
+  jQuery('.back-to-top').click(function($){
+      jQuery("html, body").animate({ scrollTop: 0 }, 400);
+      return false;
+  });
+});
+
 //bootstrap for mobile
 if(window.matchMedia("(min-width: 768px)").matches){
 	jQuery(function() {

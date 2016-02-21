@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
+<?php the_post_thumbnail('full',array('class' => 'feature')); ?>
 <div id="home" class="container-fluid">
 	<?php get_template_part('/template-parts/slider'); ?>
 
