@@ -23,6 +23,9 @@ function enqueue(){
 	//jQuery Mobile
 	wp_register_script('jquery-mobile', get_stylesheet_directory_uri() . '/js/jquery.mobile.custom.min.js', NULL, NULL);
 
+	//TouchSwipe
+	wp_register_script('touch-swipe', get_stylesheet_directory_uri() . '/js/jquery.touchSwipe.min.js', NULL, NULL);
+
 	//Theme Functions
 	wp_register_script('functions', get_stylesheet_directory_uri() . '/js/functions.js', NULL, NULL);
 
@@ -47,7 +50,7 @@ function enqueue(){
 
 //mobile
 	if ( wp_is_mobile() ) {
-		wp_enqueue_script('jquery-mobile');
+		wp_enqueue_script('touch-swipe');
 	}
 
 }

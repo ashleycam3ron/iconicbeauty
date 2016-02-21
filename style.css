@@ -314,7 +314,7 @@ Text Domain: 	ashleycameron
 		    font-size: 28px !important;font-style: italic;}
 /* !Iconic Beauties - models-carousel */
 	#beauties{position: relative;border: 1px solid #A18F45;margin: 50px auto;}
-	#beauties .carousel{overflow: hidden;}
+	#mini-carousel{overflow: hidden;}
 	#beauties h1 {
 	    font-style: italic;margin: 0;
 	    font-size: 18px;
@@ -329,9 +329,9 @@ Text Domain: 	ashleycameron
 	    width: 11.111%;
 	}
 	#beauties .carousel-control.left,
-	#beauties .carousel-control.right{background: transparent;width: 15px;}
-	#beauties .carousel-control.left{margin-left: -15px;}
-	#beauties .carousel-control.right{margin-right: -15px;}
+	#beauties .carousel-control.right{background: url(images/arrow.png) no-repeat right center;top: 13px;width: 36px;height: 7px;}
+	#beauties .carousel-control.left{left:9px;}
+	#beauties .carousel-control.right{right: 9px;background-position: left center;}
 	img.placeholder{outline: 1px solid #CEC8B3;outline-offset: -2px;}
 
 /* !Image Carousel (Model) */
