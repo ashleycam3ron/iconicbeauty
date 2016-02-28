@@ -26,8 +26,12 @@ function enqueue(){
 	//TouchSwipe
 	wp_register_script('touch-swipe', get_stylesheet_directory_uri() . '/js/jquery.touchSwipe.min.js', NULL, NULL);
 
+	//Lazy Load
+	wp_register_script('lazyload', get_stylesheet_directory_uri() . '/js/jquery.lazyload.min.js', NULL, NULL);
+
 	//Theme Functions
 	wp_register_script('functions', get_stylesheet_directory_uri() . '/js/functions.js', NULL, NULL);
+
 
 //enqueue scripts
 	wp_enqueue_script(array('jquery','bootstrap','fancybox2','functions', 'packery'));
@@ -51,6 +55,11 @@ function enqueue(){
 //mobile
 	if ( wp_is_mobile() ) {
 		wp_enqueue_script('touch-swipe');
+	}
+
+//lazy load on blog
+	if ( is_page(8) ) {
+		wp_enqueue_script('lazyload');
 	}
 
 }

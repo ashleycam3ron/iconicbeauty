@@ -90,9 +90,9 @@ jQuery(container).each(function() {
 }
 
 jQuery(window).load(function() {
-  equalheight('.equal .col');
+  equalheight('#models .view');
 });
 
 jQuery(window).resize(function(){
-  equalheight('.equal .col');
+  equalheight('#models .view');
 });

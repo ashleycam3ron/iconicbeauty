@@ -8,8 +8,13 @@
 			</article>
 
 		<?php endwhile;?>
+	</section>
+
+<?php if (is_page(7)){
+	get_template_part('/template-parts/testimonials-carousel');
+ } ?>
 
 		<?php //comment_form(); ?>
 		<?php //comments_template( $file, $separate_comments ); ?>
-	</section>
+
 <?php get_footer();?>
