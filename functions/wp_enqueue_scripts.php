@@ -11,8 +11,9 @@ function enqueue(){
 	//Fancybox
 	wp_register_script('fancybox2', get_stylesheet_directory_uri().'/js/source/jquery.fancybox.js', NULL, '2.1.4');
 
-	//packery
-	wp_register_script('packery', 'https://cdnjs.cloudflare.com/ajax/libs/packery/1.4.3/packery.pkgd.min.js');
+	//Isotope
+	wp_register_script('isotope', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', NULL, '2.2.2');
+	wp_register_script('isotope-fix', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.0.0/imagesloaded.pkgd.min.js', array('jquery'),  true );
 
 	//Sticky (menu)
 	//wp_register_script('sticky', get_stylesheet_directory_uri().'/js/jquery.sticky.js');
@@ -59,7 +60,7 @@ function enqueue(){
 
 //lazy load on blog
 	if ( is_page(8) ) {
-		wp_enqueue_script('lazyload');
+		wp_enqueue_script(array('lazyload','isotope-fix','isotope'));
 	}
 
 }

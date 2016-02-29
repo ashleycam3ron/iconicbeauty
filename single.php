@@ -5,9 +5,13 @@ if (in_category(2)){
 	<section class="container">
 		<?php while(have_posts()) : the_post(); ?>
 
-			<article class="entry col-md-10 col-md-offset-1">
+			<article class="entry col-xs-12">
 				<h1><?php the_title();?></h1>
-				<?php the_content();?>
+				<?php if ( has_post_thumbnail() ) { ?>
+					<div class="col-sm-12 col-md-5"><?php the_post_thumbnail('large', array( 'class' => 'img-responsive' )); ?></div>
+
+				<?php } ?>
+				<div class="col-md-5"><?php the_content();?></div>
 			</article>
 
 		<?php endwhile;?>

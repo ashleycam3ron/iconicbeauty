@@ -16,4 +16,5 @@ add_image_size('square_large', 300, 300, true);
 // cropped
 add_image_size('headshot', 350, 350, true);
 add_image_size('vertical', 390, 585, true);
+add_image_size('horizontal', 800, 400, true);
 ?>

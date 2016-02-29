@@ -15,7 +15,6 @@
 		</nav>
 	    <p class="copyright">&copy; <?php echo date('Y');?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
 	</footer>
-
   </body>
 </html>
 <?php wp_footer();?>
