@@ -48,44 +48,35 @@ get_header(); ?>
 	$vertical = get_field('format') == 'v1';
 	$imgRight = get_field('format') == 'h2';
 	$imgLeft = get_field('format') == 'h3';
+	$half = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'vertical', false, '' );
+	$squareImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'headshot', false, '' );
+	$hImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'horizontal', false, '' );
+	$vImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'vertical', false, '' );
+	$featureImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'vertical', false, '' );
 
 	if ($feature) { ?>
-		<article <?php post_class('grid-item col-xs-6 col-md-8 feature'); ?>>
-			<a href="<?php the_permalink(); ?>">
-		  		<?php echo get_the_post_thumbnail($post_id, 'large', array( 'class' => 'img-responsive' )); ?>
-        	</a>
+		<article <?php post_class('grid-item feature'); ?>>
+			<a href="<?php the_permalink(); ?>" class="img" style="background-image: url(<?php echo $featureImg[0]; ?>);"></a>
 	<?php } elseif ($vertical) { ?>
-		<article <?php post_class('grid-item col-xs-6 col-md-4 v1'); ?>>
-			<a href="<?php the_permalink(); ?>">
-		  		<?php echo get_the_post_thumbnail($post_id, 'vertical', array( 'class' => 'img-responsive' )); ?>
-        	</a>
+		<article <?php post_class('grid-item v1'); ?>>
+			<a href="<?php the_permalink(); ?>" class="img" style="background-image: url(<?php echo $vImg[0]; ?>);"></a>
 	<?php } elseif ($horizontal) { ?>
-		<article <?php post_class('grid-item col-xs-6 h1'); ?>>
-			<a href="<?php the_permalink(); ?>">
-		  		<?php echo get_the_post_thumbnail($post_id, 'horizontal', array( 'class' => 'img-responsive' )); ?>
-        	</a>
+		<article <?php post_class('grid-item h1'); ?>>
+			<a href="<?php the_permalink(); ?>" class="img" style="background-image: url(<?php echo $hImg[0]; ?>);"></a>
     <?php } elseif ($imgRight) { ?>
-		<article <?php post_class('grid-item col-xs-6 half'); ?>>
-        	<div class="col-sm-6 text">
+		<article <?php post_class('grid-item half imgRight'); ?>>
+        	<div class="text">
 	         <div class="cat"><?php the_category(', '); ?></div>
         	  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		      <small class="date"><?php the_time('F jS, Y') ?></small>
 		      <?php the_excerpt(); ?>
 		      <a class="btn-default" href="<?php the_permalink(); ?>">Read More</a>
         	</div>
-        	<a href="<?php the_permalink(); ?>">
-		  		<div class="col-sm-6">
-			  		<?php echo get_the_post_thumbnail($post_id, 'vertical', array( 'class' => 'img-responsive' )); ?>
-		  		</div>
-        	</a>
+        	<a href="<?php the_permalink(); ?>" class="img" style="background-image: url(<?php echo $half[0]; ?>);"></a>
     <?php } elseif ($imgLeft) { ?>
-		<article <?php post_class('grid-item col-xs-6 half gradient'); ?>>
-			<a href="<?php the_permalink(); ?>">
-				<div class="col-sm-6">
-		  		<?php echo get_the_post_thumbnail($post_id, 'vertical', array( 'class' => 'img-responsive' )); ?>
-		  		</div>
-        	</a>
-        	<div class="col-sm-6 text">
+		<article <?php post_class('grid-item half imgLeft gradient'); ?>>
+			<a href="<?php the_permalink(); ?>" class="img" style="background-image: url(<?php echo $half[0]; ?>);"></a>
+        	<div class="text">
 	          <div class="cat"><?php the_category(', '); ?></div>
         	  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		      <small class="date">
@@ -98,15 +89,14 @@ $posttags = get_the_tags();
 					}
 */ ?>
 				<?php the_time('F jS, Y') ?></small>
-		      <div class="excerpt"><?php the_excerpt(); ?></div>
-		      <a class="btn-default" href="<?php the_permalink(); ?>">Read More</a>
-			    <img class="arrow img-responsive pull-right" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-right.png" />
+		        <?php the_excerpt(); ?>
+				<a href="<?php the_permalink(); ?>">
+			    	<img class="arrow img-responsive pull-right" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-right.png" />
+			    </a>
         	</div>
 	<?php } else { ?>
-		<article <?php post_class('grid-item col-xs-6 square'); ?>>
-			<a href="<?php the_permalink(); ?>">
-		  		<?php echo get_the_post_thumbnail($post_id, 'headshot', array( 'class' => 'img-responsive' )); ?>
-        	</a>
+		<article <?php post_class('grid-item square'); ?>>
+			<a href="<?php the_permalink(); ?>" class="img" style="background: url(<?php echo $squareImg[0]; ?>) no-repeat; background-size: cover;"></a>
 	<?php } ?>
 	    </article>
 

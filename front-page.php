@@ -17,6 +17,8 @@
 		</article>
     </section><!-- end .row -->
 
+	<?php get_template_part( '/template-parts/home-posts' ); ?>
+
 	<?php if( have_rows('custom_layouts') ):
 		    while ( have_rows('custom_layouts') ) : the_row();
 				$image = get_sub_field('image');
