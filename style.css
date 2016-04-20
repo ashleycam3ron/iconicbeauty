@@ -223,6 +223,11 @@ Text Domain: 	ashleycameron
 	    right: 9px;
 	    bottom: 6px;
 	}
+	#posts img.wp-post-image {
+	    max-width: inherit;
+	    width: 100%;
+	    height: auto;
+	}
 	#posts .text {
 	    position: absolute;
 	    padding:5px 70px 0 0px; bottom: 26px;}
@@ -234,8 +239,8 @@ Text Domain: 	ashleycameron
 	    left: -75px;
 	    z-index: 0;
 	    background-color: rgba(0,0,0,0.75);
-	    transform: perspective(200px) rotateX(20deg);
-	    -webkit-transform: perspective(200px) rotateX(20deg);
+	    transform: perspective(280px) rotateX(20deg);
+	    -webkit-transform: perspective(280px) rotateX(20deg);
 	    top: 20px;
 	}
 	.border{position: absolute;padding: 10px 10px 10px 25px;border-top: 1px solid #FF3FC4;border-bottom: 1px solid #f8c53c;

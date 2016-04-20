@@ -3,7 +3,7 @@
 	<h1>Iconic Beauties</h1>
 		<?php
 			if ( wp_is_mobile() ) { $divider = 6; } else { $divider = 9; }
-			$models = new WP_Query( array( 'cat' => 2, 'posts_per_page' => -1, 'orderby' => 'title', 'order'   => 'ASC' ) ); ?>
+			$models = new WP_Query( array( 'cat' => 2, 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order'   => 'ASC' ) ); ?>
 			<?php if( $models->have_posts() ) : ?>
 				<div id="mini-carousel" class="carousel slide" data-ride="carousel">
 					<ul class="carousel-inner">

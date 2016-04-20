@@ -2,10 +2,16 @@
 
 <section id="models" class="container">
 	<h1 class="hidden">Our Iconic Beauty Models</h1>
-	<?php
+	<?php $models = new WP_Query(array(
+		    'post_type' => 'post',
+		    'cat' => 2,
+		    'post_status' => 'publish',
+		    'orderby' => 'menu_order',
+		    'order' => 'ASC',
+		));
 		$numCol = 2; // Set number of columns
 		$counter = 0; // Start Counter
-		while(have_posts()) : the_post();
+		while($models->have_posts()) : $models->the_post();
 		$counter ++; ?>
 
 	<article class="col-xs-6 col-md-4 text-center view <?php if ($counter % 2 == 0) { echo "even";} ?>" id="post-<?php the_ID(); ?>">
