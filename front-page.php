@@ -12,7 +12,7 @@
 			<div class="content col-xs-11 col-xs-offset-1 col-sm-5 col-sm-offset-1">
 				<?php the_content(); ?></div>
 			<div class="responsive-video col-xs-10 col-xs-offset-1 col-sm-10 col-md-offset-0 col-md-5">
-			  <iframe class="responsive-video iframe" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/rDh0i9UvKZc"></iframe>
+			  <iframe class="responsive-video iframe" frameborder="0" allowfullscreen src="<?php the_field('video'); ?>"></iframe>
 			</div>
 		</article>
     </section><!-- end .row -->

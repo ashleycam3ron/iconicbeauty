@@ -12,7 +12,7 @@
 		if( $home->have_posts() ) : ?>
 				<ul>
 				  <?php while ( $home->have_posts() ) : $home->the_post(); ?>
-					<li class="col-xs-6 col-md-4" id="post-<?php the_ID(); ?>">
+					<li class="col-xs-12 col-sm-6 col-md-4" id="post-<?php the_ID(); ?>">
 					    <article>
 							<div class="border">
 						    	<div class="text">

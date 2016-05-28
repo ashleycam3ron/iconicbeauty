@@ -8,7 +8,7 @@ if (in_category(2)){
 			<article class="entry col-xs-12">
 				<h1><?php the_title();?></h1>
 				<?php if ( has_post_thumbnail() ) { ?>
-					<div class="col-sm-12 col-md-5"><?php the_post_thumbnail('large', array( 'class' => 'img-responsive' )); ?></div>
+					<div class="col-sm-6 col-md-5"><?php the_post_thumbnail('large', array( 'class' => 'img-responsive' )); ?></div>
 
 				<?php } ?>
 				<div class="col-md-5"><?php the_content();?></div>

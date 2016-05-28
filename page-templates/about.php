@@ -55,16 +55,22 @@ get_header(); ?>
 						<rect x="24.7" y="24.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 82.7314 -34.2685)" class="plus"/>
 						<g><line class="plus" x1="82.7" y1="54.2" x2="82.7" y2="111.2"/><line class="plus" x1="111.2" y1="82.7" x2="54.2" y2="82.7"/></g>
 					</svg>
+<!--
 					<h2 style="margin-top: 0;"><?php the_field('title3');?></h2>
 					<?php the_field('experience');?>
+-->
 				</div>
 				<div class="col-md-6" style="margin-left: -17%;">
+<!--
 					<svg class="pink lg pull-right" viewBox="0 0 165.5 165.5">
 						<rect x="24.7" y="24.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 82.7314 -34.2685)" class="plus"/>
 						<g><line class="plus" x1="82.7" y1="54.2" x2="82.7" y2="111.2"/><line class="plus" x1="111.2" y1="82.7" x2="54.2" y2="82.7"/></g>
 					</svg>
+-->
+<!--
 					<h2><?php the_field('title4');?></h2>
 					<?php the_field('opportunity');?>
+-->
 				</div>
 			</div>
 		</div>

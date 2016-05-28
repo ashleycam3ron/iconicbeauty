@@ -30,11 +30,11 @@
 				<nav id="social">
 					<h3>Connect</h3>
 					<ul>
-						<?php if (get_field('facebook')){ ?><li><a class="facebook" target="_blank" href="<?php the_field('facebook'); ?>">facebook</a></li><?php } ?>
-						<?php if (get_field('twitter')){ ?><li><a class="twitter" target="_blank" href="<?php the_field('twitter'); ?>">twitter</a></li><?php } ?>
 						<?php if (get_field('instagram')){ ?><li><a class="instagram" target="_blank" href="<?php the_field('instagram'); ?>">instagram</a></li><?php } ?>
+						<?php if (get_field('twitter')){ ?><li><a class="twitter" target="_blank" href="<?php the_field('twitter'); ?>">twitter</a></li><?php } ?>
+						<?php if (get_field('snapchat')){ ?><li><a class="google" target="_blank" href="<?php the_field('snapchat'); ?>">snapchat</a></li><?php } ?>
+						<?php if (get_field('facebook')){ ?><li><a class="facebook" target="_blank" href="<?php the_field('facebook'); ?>">facebook</a></li><?php } ?>
 						<?php if (get_field('youtube')){ ?><li><a class="youtube" target="_blank" href="<?php the_field('youtube'); ?>">youtube</a></li><?php } ?>
-						<?php if (get_field('google')){ ?><li><a class="google" target="_blank" href="<?php the_field('google'); ?>">google+</a></li><?php } ?>
 						<?php if (get_field('email')){ ?><li><a class="email" target="_blank" href="mailto:<?php the_field('email'); ?>">contact</a></li><?php } ?>
 					</ul>
 				</nav>
@@ -72,6 +72,7 @@
 	<section id="inspiration" class="row">
 		<article class="col-xs-10 col-xs-offset-1 col-sm-5 col-md-4 col-lg-offset-0 ">
 			<?php if (get_field('content')){ ?>
+				<h2>The Real Me</h2>
 				<?php the_field('content'); ?>
 			<?php } else { ?>
 				<h2>Headline</h2>
@@ -102,6 +103,9 @@
 					<img class="img-responsive placeholder" src="http://placehold.it/200x200/eeeeee/A18F45" alt="placeholder">
 				</div>
 			<?php } ?>
+
+			<div class="col-md-6" style="clear: left;"><?php the_field('favorites'); ?></div>
+			<div class="col-md-6"><?php the_field('this_or_that'); ?></div>
 		</article>
 	</section>
 	<?php get_template_part('/template-parts/models-carousel'); ?>

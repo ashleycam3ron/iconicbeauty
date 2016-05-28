@@ -21,7 +21,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700|Raleway:400,700|Cinzel:400' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Oswald' rel='stylesheet' type='text/css'>
 	<link rel="alternate" href="http://iconicbeauty.com" hreflang="en-us" />
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon-pink.ico" />
     <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon-192.png">
     <link rel="image_src" href="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" />
     <?php wp_head(); ?>

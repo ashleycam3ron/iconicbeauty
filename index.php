@@ -14,7 +14,4 @@
 	get_template_part('/template-parts/testimonials-carousel');
  } ?>
 
-		<?php //comment_form(); ?>
-		<?php //comments_template( $file, $separate_comments ); ?>
-
 <?php get_footer();?>
