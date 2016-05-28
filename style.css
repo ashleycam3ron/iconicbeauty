@@ -61,6 +61,7 @@ Text Domain: 	ashleycameron
 	body#tinymce{border: 0 !important;}
 	body.page-template-about{background: url(images/about.png) no-repeat 13px 150px;}
 	.entry {padding-bottom: 5%;}
+	#about .entry {padding-bottom: 8%;}
 	.inverse{background: black;color: white;padding-top:1.5%;padding-bottom: 2%;}
 
 	.plus{fill:none;stroke:#000000;stroke-width: 2px;width:116px; height:116px;}

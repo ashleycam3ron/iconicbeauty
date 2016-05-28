@@ -9,11 +9,11 @@ get_header(); ?>
 	<h1 class="hidden">About Iconic Beauty</h1>
 	<div class="col-md-11 col-md-offset-1">
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-2 col-sm-9 col-sm-offset-2 col-md-3 col-md-offset-0 gold">
+			<div class="col-xs-10 col-xs-offset-2 col-sm-9 col-sm-offset-2 col-md-4 col-md-offset-0 gold">
 				<h2><?php the_field('title');?></h2>
 				<?php the_field('mission');?>
 			</div>
-			<div class="entry col-sm-9 col-sm-offset-2 col-md-9 col-md-offset-0">
+			<div class="entry col-sm-9 col-sm-offset-2 col-md-8 col-md-offset-0">
 				<?php the_content(); ?>
 			</div>
 		</div>
@@ -49,8 +49,8 @@ get_header(); ?>
 					$alt = $image['alt'];
 					$size = 'large';
 					$lg = $image['sizes'][ $size ]; ?>
-				<img class="col-sm-6 col-md-7 img-responsive" src="<?php echo $lg;?>" alt="<?php echo $alt ?>" />
-				<div class="col-md-5">
+				<img class="col-sm-6 col-md-8 img-responsive" src="<?php echo $lg;?>" alt="<?php echo $alt ?>" />
+				<div class="col-md-4">
 					<svg class="blue" viewBox="0 0 165.5 165.5">
 						<rect x="24.7" y="24.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 82.7314 -34.2685)" class="plus"/>
 						<g><line class="plus" x1="82.7" y1="54.2" x2="82.7" y2="111.2"/><line class="plus" x1="111.2" y1="82.7" x2="54.2" y2="82.7"/></g>
