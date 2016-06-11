@@ -70,7 +70,7 @@
 	</article>
 
 	<section id="inspiration" class="row">
-		<article class="col-xs-10 col-xs-offset-1 col-sm-5 col-md-4 col-lg-offset-0 ">
+		<article class="col-xs-10 col-xs-offset-1 col-sm-10 col-md-4 col-md-offset-0">
 			<?php if (get_field('content')){ ?>
 				<h2>The Real Me</h2>
 				<?php the_field('content'); ?>
@@ -80,7 +80,7 @@
 				<p>Content Here</p>
 			<?php } ?>
 		</article>
-		<article class="inspiration col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0 col-lg-8">
+		<article class="inspiration col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-offset-0 col-lg-8">
 			<h2 class="smile">What makes me smile... <br/><span><span class="amp">&</span> gives me inspiration.</span></h2>
 			<?php if (get_field('inspiration')){ ?>
 				<section id="gallery" class="images">
@@ -104,8 +104,8 @@
 				</div>
 			<?php } ?>
 
-			<div class="col-md-6" style="clear: left;"><?php the_field('favorites'); ?></div>
-			<div class="col-md-6"><?php the_field('this_or_that'); ?></div>
+			<div class="col-sm-6 col-md-6" style="clear: left;"><?php the_field('favorites'); ?></div>
+			<div class="col-sm-6 col-md-6"><?php the_field('this_or_that'); ?></div>
 		</article>
 	</section>
 	<?php get_template_part('/template-parts/models-carousel'); ?>

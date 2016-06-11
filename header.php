@@ -16,7 +16,9 @@
 	<meta name="dc.source" CONTENT="<?php echo esc_url( home_url() ) ?>">
 	<meta name="dc.title" CONTENT="<?php echo wp_title(); ?>">
 	<meta name="dc.subject" CONTENT="<?php bloginfo('description');?>">
-	<meta name="dc.creator" content="Minnow Project">
+	<meta name="dc.creator" content="Iconic Beauty by Bryiana Dyrdek">
+	<meta property="og:image" content="<?php echo get_stylesheet_directory_uri() ?>/images/iconic-beauties.jpg" />
+	<meta name="google-site-verification" content="j3sqC8Kyje6ImLv0Uu53Zw7DqEXZJZBgAUu0851UhfA" />
 	<title><?php echo wp_title();?></title>
 	<link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700|Raleway:400,700|Cinzel:400' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Oswald' rel='stylesheet' type='text/css'>

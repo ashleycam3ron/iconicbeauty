@@ -76,14 +76,14 @@ Text Domain: 	ashleycameron
 /* !02 Typography */
 	h1 {font-size: 60px; text-align: center; margin: 0 auto 40px; }
 	h2{font-size: 32px;font-style: italic;margin-left: -3px;}
-	h3{font-size: 24px;}
+	h3{font-size: 24px;letter-spacing: .1em;}
 	h4{font-size: 18px;}
 	h5{font-size: 16px;}
 	h6{font-size: 14px;}
 	h1,h2{font-family: 'Old Standard TT', serif;}
 	h1,h2,h3,h4{text-transform: uppercase;}
 	p {margin: 0 0 14px;line-height: 1.65;}
-	blockquote	{font-size: 14.5px;}
+	blockquote	{font-size: 14.5px;border: 0;}
 	li {list-style-position: inside;}
 	.lead {font-size: 14px;color: #e4788e; margin-top: 20px; text-align: center;}
 	u {text-transform: uppercase; letter-spacing: .2em; text-decoration: none; border-bottom: 1px solid #EFACB9;color: #e4788e;}
@@ -231,7 +231,7 @@ Text Domain: 	ashleycameron
 	#posts .text {
 	    position: absolute;
 	    padding:5px 70px 0 0px; bottom: 26px;}
-	#posts .text p{font-size: 12px;line-height: 1.5;}
+	#posts .text p{font-size: 12px;line-height: 1.5;padding-right: 10px;}
 	#posts .mask{
 	    width: 100%;
 	    height: 120%;
@@ -264,6 +264,20 @@ Text Domain: 	ashleycameron
 	    font-style: italic;
 	    font-size: 12px;margin: 0 0 8px;
 	}
+
+@media (max-width: 992px) {
+	 #posts{ margin-top: 5%;}
+}
+@media (max-width: 1199px) {
+	.border { padding: 10px 10px 10px 16px;}
+	#posts h2 {font-size: 20px;}
+	#posts .text p {font-size: 11px;line-height: 1.45;}
+	#posts .text {padding-right: 80px;}
+	#posts .mask {
+	    left: -55px;
+	    top: -20px;
+	}
+}
 
 
 /* !Video */
@@ -324,7 +338,7 @@ Text Domain: 	ashleycameron
 		}
 		.bio img{
 			border: 1px solid #ddd;
-			padding: 5px;
+			padding: 5px;    margin: auto;
 		}
 		#model ol {
 		    margin: -14px 0 0px 14px;
@@ -585,10 +599,10 @@ nav ul{margin: 0;}
 	#blog .btn-default{display: block;text-align: center;margin-top: 17px;}
 
 	#blog .grid-item.square:before,
-	#blog .grid-item.half:before{margin-top: 100%;}
+	#blog .grid-item.half:before,
+	#blog .grid-item.imgRight:before{margin-top: 100%;}
 	#blog .grid-item.v1:before {margin-top: 140%;}
-	#blog .grid-item.h1:before,
-	#blog .grid-item.imgRight:before {margin-top: 50%;}
+	#blog .grid-item.h1:before{margin-top: 50%;}
 	#blog .grid-item.feature {width: 66.67%;}
 	#blog .grid-item.feature:before{margin-top: 70%;}
 	#blog .grid-item {position: relative;float: left;overflow: hidden;}
@@ -606,6 +620,12 @@ nav ul{margin: 0;}
 	#blog .feature .img,
 	#blog .v1 .img{width: 100.1%;}
 
+@media screen and (max-width: 1100px) {
+	#blog h2 {
+	    margin: 8px 0 6px -3px;
+	    font-size: 29px;
+	}
+}
 @media screen and (max-width: 992px) {
 	#blog .grid-item.feature {width: 100%;}
 	#blog .btn-default{padding: 11px 28px;}
@@ -621,11 +641,16 @@ nav ul{margin: 0;}
 @media screen and (max-width: 400px) {
 	#blog .img,#blog .text {width: 100%;}
 	#blog .square{width: 100%;}
-	#blog .grid-item.half:before {margin-top: 200%;}
+	#blog .grid-item.half:before {margin-top: 260%;}
 	#blog .imgLeft .img, #blog .imgLeft .text,
 	#blog .imgRight .img, #blog .imgRight .text {height: 50%;background-position: center top;}
     #blog .imgLeft .text,#blog .imgRight .text {bottom: 0;top: auto; }
     #blog .v1 {width: 100%;}
+}
+
+.postid-499 h3 {
+    font-size: 20px;
+    text-transform: none;
 }
 
 /* !Coming Soon */
@@ -652,7 +677,7 @@ nav ul{margin: 0;}
 /* !Testimonials */
 	.item .quote{margin: 0 auto 12px;}
 	#testimonials {margin-bottom:75px;position: relative;}
-	#testimonials .entry {padding: 18px 4% 0;width: 30.25%;margin: 50px 1.5% 75px;}
+	#testimonials .entry {padding: 18px 4% 25px;width: 30.25%;margin: 50px 1.5% 75px;}
 	#testimonials .img-circle {
 	    max-width: 100px;
 	    height: auto;
@@ -713,6 +738,27 @@ nav ul{margin: 0;}
 	#menu-social li.rss a,
 	#menu-social-1 li.rss a		 {background-position:-184px 1px;}
 
+/* 2017 iconic beauties page */
+	.page-id-693 h1{display: none;}
+	.page-id-693 .entry{background: url('images/2017bg.jpg') no-repeat center black;background-size: contain;padding: 14% 0;color:white;}
+
+@media (max-width: 600px){
+	.page-id-693 .entry {
+	    padding: 23% 0;
+	}
+}
+@media (max-width: 400px){
+	.page-id-693 .container {padding: 0;}
+	.page-id-693 .entry {
+	    background-size: 120%;
+	    padding: 34% 0;
+	}
+	.page-id-693 .entry h2 {    margin-bottom: 10px !important;}
+}
+
+
+
+
 /* !Back To Top */
 	.back-to-top{width:80px;height:86px; position:fixed;bottom: 45px;right:40px; display:none; background: url('images/back-to-top.png') no-repeat center;z-index: 1;}
 
@@ -738,6 +784,7 @@ nav ul{margin: 0;}
 /* 	!Mobile styles */
 @media (min-width: 768px) and (max-width: 1024px) {
 	.images img {width: 32.3%;}
+	body.page-template-about {    background-size: 100px;}
 
 }
 @media (max-width: 992px){
@@ -759,9 +806,9 @@ nav ul{margin: 0;}
 	#inspiration > :nth-child(1){    padding-left: 40px;}
 	.bio {
     padding-left: 40px;
-    width: 38%;
+    width: 80%;
 }
-.slides{width: 50%;}
+.slides{width: 80%;}
 
 }
 @media only screen
@@ -771,6 +818,13 @@ nav ul{margin: 0;}
   and (-webkit-min-device-pixel-ratio: 2) {
 	#mini-carousel img { width: 16.667%;}
 }
+
+@media (max-width: 769px) {
+	.home img.feature {    margin-top: 16%;}
+	#intro .content { margin-bottom: 20px;}
+	#home .responsive-video {margin-bottom: 32px;}
+
+	}
 @media (max-width: 767px) {
 	h1 { font-size: 40px;}
 /* 	#models .even img {border-color: #FF9DAE;} */
@@ -831,6 +885,9 @@ li#menu-item-25 a{background-position: 13px -213px;}
 }
 #testimonials .item .entry:last-child{margin-bottom: 75px;}
 img.img-responsive.wp-post-image { margin:0 auto 17px;}
+#posts img.img-responsive.wp-post-image {
+    margin: 0 auto;
+}
 }
 @media (max-width: 400px) {
 	h1{font-size: 30px;}
@@ -859,6 +916,7 @@ img.img-responsive.wp-post-image { margin:0 auto 17px;}
 	    display: block;
 	    text-align: center;padding: 15px 3%;
 	}
+	#subscribe small {font-size: 9px;}
 	.home img.feature {margin-top: 80px;}
 	#posts li {
 	    padding: 0;
@@ -871,6 +929,7 @@ img.img-responsive.wp-post-image { margin:0 auto 17px;}
 	#gform_1 input[type=text]{padding: 18px 0 4px;}
 	#gform_1 textarea {padding: 0;}
 	#testimonials :first-child {margin-top: 0;}
+	#model ol.carousel-indicators {    left: -43px;}
 }
 @media (max-width: 320px) {
 	.navbar-brand>img {

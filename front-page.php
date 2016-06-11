@@ -9,7 +9,7 @@
 				<?php if (get_field('title')){ ?><h2><?php the_field('title'); ?></h2><?php } ?>
 				<?php if (get_field('subheading')){ ?><h3><span><?php the_field('subheading'); ?></span></h3><?php } ?>
 			</div>
-			<div class="content col-xs-11 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+			<div class="content col-xs-11 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-5">
 				<?php the_content(); ?></div>
 			<div class="responsive-video col-xs-10 col-xs-offset-1 col-sm-10 col-md-offset-0 col-md-5">
 			  <iframe class="responsive-video iframe" frameborder="0" allowfullscreen src="<?php the_field('video'); ?>"></iframe>

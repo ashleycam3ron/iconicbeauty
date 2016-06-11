@@ -24,7 +24,7 @@
 							    </div>
 						    </div>
 							<div class="mask"></div>
-							<?php if ( has_post_thumbnail()) { the_post_thumbnail('medium', array( 'class' => 'img-responsive' )); } ?>
+							<?php if ( has_post_thumbnail()) { the_post_thumbnail('vertical', array( 'class' => 'img-responsive' )); } ?>
 					    </article>
 					</li>
 					<?php endwhile;

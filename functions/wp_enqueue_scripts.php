@@ -33,10 +33,6 @@ function enqueue(){
 	//Theme Functions
 	wp_register_script('functions', get_stylesheet_directory_uri() . '/js/functions.js', NULL, NULL);
 
-	//Google Analytics (previous account)
-	wp_register_script('analytics', get_stylesheet_directory_uri().'/js/analytics.js', NULL, NULL);
-
-
 //enqueue scripts
 	wp_enqueue_script(array('jquery','bootstrap','fancybox2','functions', 'packery','analytics'));
 

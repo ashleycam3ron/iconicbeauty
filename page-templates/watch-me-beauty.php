@@ -12,9 +12,10 @@ function stylesheet(){?>
 .fancybox-nav span { visibility: visible; }
 .fancybox-next { right: -60px; }
 .fancybox-prev { left: -60px; }
-.fancybox,.fancybox img, a.download{transition: all 0.5s ease;}
-.fancybox img{border: 8px solid rgba(224, 58, 62, 0.75);margin:0 auto 10px;}
-.fancybox img:hover{opacity: .9;border-color:rgba(176,255,228,0.75); }
+.fancybox,.fancybox img{transition: all 0.5s ease;}
+.fancybox img{border: 8px solid #d2508c;margin:0 auto 10px;}
+.fancybox img:hover{opacity: .9;border-color:rgba(176,255,228,1); }
+#page a.fancybox{padding: 0 5px !important;}
 </style>
 <?php } ?>
 
