@@ -19,7 +19,7 @@ function enqueue(){
 	//wp_register_script('sticky', get_stylesheet_directory_uri().'/js/jquery.sticky.js');
 
 	//jQuery UI
-	wp_register_script('jquery-ui', '//code.jquery.com/ui/1.11.4/jquery-ui.js');
+	wp_register_script('jquery-ui', '//code.jquery.com/ui/1.12.0/jquery-ui.js');
 
 	//jQuery Mobile
 	wp_register_script('jquery-mobile', get_stylesheet_directory_uri() . '/js/jquery.mobile.custom.min.js', NULL, NULL);
@@ -60,6 +60,11 @@ function enqueue(){
 //lazy load on blog
 	if ( is_page(8) ) {
 		wp_enqueue_script(array('lazyload','isotope-fix','isotope'));
+	}
+
+//landing page
+	if ( is_page_template( 'page-templates/landing-page.php' ) ) {
+		wp_enqueue_script(array('jquery-ui'));
 	}
 
 }

@@ -11,16 +11,6 @@ Tags:			dark, light, black, white, responsive-layout, editor-style, featured-ima
 Text Domain: 	ashleycameron
 */
 
-@font-face {
-  font-family: 'Futura';
-  src: url('fonts/Futura.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Futura.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/Futura.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/Futura.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/Futura.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/Futura.svg#Futura') format('svg'); /* Legacy iOS */
-}
-
 /* !WordPress Core */
 	.alignnone{margin:5px 20px 20px 0}
 	.aligncenter,div.aligncenter{display:block;margin:5px auto}
@@ -91,7 +81,7 @@ Text Domain: 	ashleycameron
 	.gold > h2 {opacity: .3;}
 
 /* !03 Links */
-	a{cursor: pointer;color:#15397f;text-decoration: none;cursor: pointer;
+	a{cursor: pointer;color:#e84ca2;text-decoration: none;cursor: pointer;
 	-webkit-transition: all 0.2s;
        -moz-transition: all 0.2s;
          -o-transition: all 0.2s;
@@ -654,6 +644,63 @@ nav ul{margin: 0;}
 }
 
 /* !Coming Soon */
+
+/* !2017 Landing Page */
+	h2.ui-accordion-header{background: rgba(238, 44, 125, 0.12);color: #ed2a7b;margin: 0 0 4px;padding: 10px 15px 7px;font-size: 27px;}
+	h2.ui-accordion-header-active{background: #ed2a7b;color: white;}
+	.ui-accordion-content {padding: 15px 50px 15px 20px;font-size: 95%;}
+	#welcome img{margin: auto;}
+	#mission {margin-bottom:40px;}
+	#mission u{border-bottom: 1px solid #ed2a7b;color: #ed2a7b;}
+	#pledge, #registration{background: url(images/group-shot.jpg) no-repeat black center top; background-size: cover;color: white;padding: 5%;position: relative;min-height: 70vh;}
+	#pledge > div{max-height: 70vh;overflow-y: scroll;}
+	.gradient-black{width: 100%;height:150px;position: absolute;bottom: 0;left: 0;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+	#twentyseventeen section > h2{font-size: 74px;text-align: center;}
+	#expect h2 {margin-bottom: 20px;}
+	#expect h2 + div{padding: 40px 10px;border: 1px solid #ccc; border-left: 0; border-right: 0; margin-bottom: -15px;
+	-webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;}
+    #welcome h3{text-transform: none;letter-spacing: 0.02em;font-weight: 600;}
+	#pledge p:first-of-type:first-letter,
+	#welcome p:first-of-type:first-letter,
+	#expect p:first-of-type:first-letter {float: left; margin: 0 4px 0 -4px; font-size: 54px; line-height: .7em; display: block; padding: 0; color: #999; font-family: 'Cinzel', serif;}
+	#pledge p:first-of-type:first-letter{color: #ed2a7b;}
+	#dates {background: url(images/bg-dates.png) no-repeat;background-size: cover;padding-bottom: 4%;}
+	#invest {background: url(images/bg-invest.png) no-repeat;background-size: cover;}
+	#invest h2{background: #ed2a7b;color: white;margin: 0;padding: 25px 0 20px;line-height: .9;}
+	#invest h2 span{border: 1px solid #fff;border-left: 0; border-right: 0; font-size: 23px; padding: 2px 2px 0; font-family: 'Raleway', sans-serif; font-style: normal; letter-spacing: .08em; display: inline-block; vertical-align: super; line-height: 1.3em;margin: 0 -15px;}
+	#invest h3{font-weight: bold;margin: 20px 0 1px; font-size: 21.1px;}
+	#testimonials2{background: url(images/triangle-pattern.png) repeat;}
+	#testimonials2 h2{background: #000;color: white;margin: 0;padding: 25px 0 10px;}
+	.carousel-linked-nav,
+	.carousel-linked-projects {
+	  display: block;
+	  margin: 0 auto;}
+	.carousel-linked-nav,
+	.carousel-linked-projects {text-align: center;clear: left;}
+	.carousel-linked-projects { background: #000;padding-bottom: 25px;}
+	#testimonials2 {height:100vh;}
+	#testimonials2 .pagination>li{display: inline-block;}
+	#testimonials2 .pagination>li>a {color:white;border: 1px solid #fff; background: #0000; border-radius: 0; border-left: 0; border-right: 0; text-transform: uppercase; font-family: 'Cinzel', serif; }
+	#testimonials2 .pagination>.active>a {background-color: #ed2a7b;}
+	#testimonials2 img.title {margin:45px auto 40px;}
+	#testimonials2 .author {clear: both;color: #856f3c;border-top: 1px solid #856f3c;border-bottom: 1px solid #856f3c;margin-left: 100px;    width: 270px;}
+	#testimonials2 .author img {max-width:83px;height: auto;float: left;margin-right: 7px;}
+	#testimonials2 .author .name {text-transform: uppercase;margin-bottom: 0;}
+	#testimonials2 .author .title {}
+	#testimonials2 p.author  {max-width:83px;height: auto;}
+	#myCarousel .carousel-control.left{margin-left: -81px;}
+	#myCarousel .carousel-control.left,
+	#myCarousel .carousel-control.right{background: url(images/nav.png) no-repeat 0 0;width:66px;height:131px;opacity: 1;margin-top: 15%;}
+	#myCarousel .carousel-control.right{background-position: -66px 0;margin-right: -81px;}
+	#registration a{color: white;border-color:white;}
 
 /* !News */
 	.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover { background-color: #000; border-color: rgba(0, 0, 0, 0); border-radius: 20em; }
