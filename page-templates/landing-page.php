@@ -119,7 +119,7 @@ get_header(); ?>
 				$thumb = $authorImage['sizes']['thumbnail']; ?>
 
 				<div class="item <?php if (  $slide == 0){ echo 'active';};?>" data-project='1'>
-					<div class="col-md-10 col-md-offset-2">
+					<div class="col-md-9 col-md-offset-2">
 						<img style="float: left;" src="<?php echo get_stylesheet_directory_uri();?>/images/quote.png" alt="quote"/>
 					    <div class="col-md-8"><?php echo $quote; ?></div>
 						<div class="author">
@@ -141,7 +141,7 @@ get_header(); ?>
 				$title = get_sub_field('author_title'); ?>
 
 				<div class="item <?php if ( $slide == 0){ echo 'active';};?>" data-project='2'>
-					<div class="col-md-10 col-md-offset-2">
+					<div class="col-md-9 col-md-offset-2">
 						<img style="float: left;" src="<?php echo get_stylesheet_directory_uri();?>/images/quote.png" alt="quote"/>
 					    <div class="col-md-8"><?php echo $quote; ?></div>
 						<div class="author">
@@ -162,7 +162,7 @@ get_header(); ?>
 				$title = get_sub_field('author_title'); ?>
 
 				<div class="item <?php if ( $slide == 0){ echo 'active';};?>" data-project='3'>
-					<div class="col-md-10 col-md-offset-2">
+					<div class="col-md-9 col-md-offset-2">
 						<img style="float: left;" src="<?php echo get_stylesheet_directory_uri();?>/images/quote.png" alt="quote"/>
 					    <div class="col-md-8"><?php echo $quote; ?></div>
 						<div class="author">
@@ -181,7 +181,7 @@ get_header(); ?>
 		  <li><a href="#3" data-project='3'>Former Applicants</a></li>
 		</ol>
 
-		<div class="col-md-10 col-md-offset-1" style="background: white;min-height: 100%;">
+		<div class="col-md-10 col-md-offset-1" style="background: white;min-height: 100%;max-width: 100%;">
 			<div id="myCarousel" class="carousel slide">
 			  <!-- Carousel items -->
 			  <img class="img-responsive active title title1" src="<?php echo get_stylesheet_directory_uri();?>/images/reigning-iconic-beauty-models-title.png" alt="Reigning Iconic Beauty Models"/>
@@ -201,7 +201,7 @@ get_header(); ?>
 						$thumb = $authorImage['sizes']['thumbnail']; ?>
 
 						<div class="item <?php if (  $slide == 0){ echo 'active';};?>" data-project='1'>
-							<div class="col-md-10 col-md-offset-2">
+							<div class="col-md-9 col-md-offset-2">
 								<img style="float: left;" src="<?php echo get_stylesheet_directory_uri();?>/images/quote.png" alt="quote"/>
 							    <div class="col-md-8"><?php echo $quote; ?></div>
 								<div class="author">

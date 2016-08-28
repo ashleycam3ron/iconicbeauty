@@ -309,14 +309,11 @@ Text Domain: 	ashleycameron
 
 @media (min-width: 769px){
 	.view .mask{width:100%;height:100%;top:0;left:0;;z-index:2;transition:all .3s ease-in-out}
-	.view .mask-1,
-	#expect .mask-1{width:100%;height:120%;position:absolute;overflow:hidden;top:0;left:0;opacity:0;z-index:0;background-color:rgba(255,157,174,0.75);transition:all .5s ease-in-out;transform:rotate(9deg) translateX(-180px);transform-origin:100% 0}
+	.view .mask-1{width:100%;height:120%;position:absolute;overflow:hidden;top:0;left:0;opacity:0;z-index:0;background-color:rgba(255,157,174,0.75);transition:all .5s ease-in-out;transform:rotate(9deg) translateX(-180px);transform-origin:100% 0}
 	.view.even .mask-1{background-color:rgba(176,255,228,0.75)}
 	.view:hover img{transform:scale(1.1)}
 	.view:hover .mask{opacity:1}
-	.view:hover .mask-1,
-	#expect .mask-1{opacity:1;transition-delay:0;transform:rotate(9deg) translateX(-50px);}
-	#expect .mask-1{z-index: -1;background-color:rgba(255,157,174,0.35);}
+	.view:hover .mask-1{opacity:1;transition-delay:0;transform:rotate(9deg) translateX(-50px);}
 	.view:hover h2,.view:hover p,.view:hover a.info{opacity:1;transform:translateY(0px)}
 	.view:hover p{transition-delay:.1s}
 	.view:hover a.info{transition-delay:.2s}
@@ -650,8 +647,8 @@ nav ul{margin: 0;}
 /* !Coming Soon */
 
 /* !2017 Landing Page */
-	li#menu-item-813{letter-spacing: 0;display: none;}
-/* 	.navbar-default .navbar-nav>li>a {padding: 0px 23px;} */
+	li#menu-item-813{letter-spacing: 0;}
+	.navbar-default .navbar-nav>li>a {padding: 0px 23px;}
 	h2.ui-accordion-header{background: rgba(238, 44, 125, 0.12);color: #ed2a7b;margin: 0 0 4px;padding: 10px 15px 7px;font-size: 27px;cursor: pointer;}
 	h2.ui-accordion-header:hover{background: rgba(238, 44, 125, 0.20)}
 	h2.ui-accordion-header-active,h2.ui-accordion-header-active:hover{background: #ed2a7b;color: white;}
@@ -683,6 +680,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	#expect .num{border-bottom: 1px solid #000;width: 40px;margin: auto; padding: 9px 0;}
 	#expect .col-md-4{border:1px solid #f4a8a3;padding: 20px 24px 30px;width: 31.8%;margin: 0 .7%;line-height: 1.35; font-size: 12px;overflow: hidden;}
 	#expect h4{color: #ed2a7b;font-size: 13.5px;}
+	#expect .mask-1{width:100%;height:120%;position:absolute;overflow:hidden;top:0;left:0;opacity:1;transform:rotate(9deg) translateX(-180px);transform-origin:100% 0;transition-delay:0;transform:rotate(9deg) translateX(-50px);z-index: -1;background-color:rgba(255,157,174,0.35);}
 	#dates {background: url(images/bg-dates.png) no-repeat;background-size: cover;padding-bottom: 4%;}
 	#invest {background: url(images/bg-invest.png) no-repeat;background-size: cover;}
 	#invest h2{background: #ed2a7b;color: white;margin: 0;padding: 25px 0 20px;line-height: .9;}
@@ -742,6 +740,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     #registration h2 {margin: 20vh auto 5px;}
     #registration a {color: #fff; border-color: #fff; margin: 30px 10px 0; text-transform: lowercase; font-style: italic; letter-spacing: 0.05em; font-size: 20px; font-weight: normal; padding: 15px 60px; }
 
+	@media(max-width:992px) {
+		#twentyseventeen section > h2 {font-size: 48px;}
+		#invest h2 span, #checklist h2 span {font-size: 13px;margin: 0 -8px;}
+		#testimonials2 .col-md-10{float: left;}
+		#myCarousel .carousel-control.left, #myCarousel .carousel-control.right {width: 50px; height: 50px; margin: -5px; background-size: 100%; }
+		#myCarousel .carousel-control.right { background-position: -26px 0px;}
+		#myCarousel .carousel-control.left {background-position: 25px 0px;margin-left: 0;}
+		}
 	@media(max-width:767px) {
 		#welcome h3 {text-align: center;}
 		#welcome .entry{padding: 20px 0 28px;}
@@ -752,14 +758,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 		#invest div > div{padding: 0;}
 		#expect .col-md-4{width: 48%;margin: 0 .7%;float: left;}
 		#dates img, #invest img{margin: 5px auto 20px;}
-		#testimonials2 .col-md-10{float: left;}
 		#registration {text-align: center !important;font-size: 15px;}
 		#registration a {margin: 14px auto 0; font-size: 17px; padding: 15px 20px; }
+		.item img{float: none !important;display: block;margin-bottom: 12px;}
+		#myCarousel .carousel-control.left,
+		#myCarousel .carousel-control.right {margin-top: 60px;}
+		#testimonials2 .author{margin-left: 40px;}
+		#testimonials2 .author img {float: left !important;}
+
 	}
 	@media(max-width:400px) {
-		#expect .col-md-4{width: 100%;margin: 0;}
+		#expect .col-md-4{width: 100%;margin: 7px 0;}
 		#expect .text-center{text-align: center !important;}
-		#invest h2 span, #checklist h2 span {font-size: 13px;margin: 0 -8px;}
 		#checklist h2 span:before {top: -21px;left: -21px;}
 		#checklist .pink { padding: 20px 15px 20px 30px;margin: 20px 5% 0 0;}
 	}
@@ -1008,6 +1018,7 @@ li#menu-item-26 a{background-position: 13px -77px;}
 li#menu-item-86 a{background-position: 13px -123px;}
 li#menu-item-30 a{background-position: 13px -168px;}
 li#menu-item-25 a{background-position: 13px -213px;}
+li#menu-item-813 a{background-position: 13px -479px;}
 .navbar-nav .open .dropdown-menu{background-color: black;}
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {padding: 12px 10px 12px 50px;}
 .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-nav .open .dropdown-menu>li>a:hover {
