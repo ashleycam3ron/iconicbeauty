@@ -116,7 +116,8 @@ Text Domain: 	ashleycameron
 	.menu li img,.menu li:hover img,
 	.gallery li img,
 	.gallery li:hover img,
-	#models a img,#models a:hover img {
+	#models a img,#models a:hover img,
+	.ui-accordion-header,.ui-accordion-header:hover {
 		-webkit-transition:all .3s ease-in-out;
 		-moz-transition:all .3s ease-in-out;
 		-ms-transitiog n:all .3s ease-in-out;
@@ -308,11 +309,14 @@ Text Domain: 	ashleycameron
 
 @media (min-width: 769px){
 	.view .mask{width:100%;height:100%;top:0;left:0;;z-index:2;transition:all .3s ease-in-out}
-	.view .mask-1{width:100%;height:120%;position:absolute;overflow:hidden;top:0;left:0;opacity:0;z-index:0;background-color:rgba(255,157,174,0.75);transition:all .5s ease-in-out;transform:rotate(9deg) translateX(-180px);transform-origin:100% 0}
+	.view .mask-1,
+	#expect .mask-1{width:100%;height:120%;position:absolute;overflow:hidden;top:0;left:0;opacity:0;z-index:0;background-color:rgba(255,157,174,0.75);transition:all .5s ease-in-out;transform:rotate(9deg) translateX(-180px);transform-origin:100% 0}
 	.view.even .mask-1{background-color:rgba(176,255,228,0.75)}
 	.view:hover img{transform:scale(1.1)}
 	.view:hover .mask{opacity:1}
-	.view:hover .mask-1{opacity:1;transition-delay:0;transform:rotate(9deg) translateX(-50px)}
+	.view:hover .mask-1,
+	#expect .mask-1{opacity:1;transition-delay:0;transform:rotate(9deg) translateX(-50px);}
+	#expect .mask-1{z-index: -1;background-color:rgba(255,157,174,0.35);}
 	.view:hover h2,.view:hover p,.view:hover a.info{opacity:1;transform:translateY(0px)}
 	.view:hover p{transition-delay:.1s}
 	.view:hover a.info{transition-delay:.2s}
@@ -646,13 +650,16 @@ nav ul{margin: 0;}
 /* !Coming Soon */
 
 /* !2017 Landing Page */
-	h2.ui-accordion-header{background: rgba(238, 44, 125, 0.12);color: #ed2a7b;margin: 0 0 4px;padding: 10px 15px 7px;font-size: 27px;}
-	h2.ui-accordion-header-active{background: #ed2a7b;color: white;}
+	li#menu-item-813{letter-spacing: 0;display: none;}
+/* 	.navbar-default .navbar-nav>li>a {padding: 0px 23px;} */
+	h2.ui-accordion-header{background: rgba(238, 44, 125, 0.12);color: #ed2a7b;margin: 0 0 4px;padding: 10px 15px 7px;font-size: 27px;cursor: pointer;}
+	h2.ui-accordion-header:hover{background: rgba(238, 44, 125, 0.20)}
+	h2.ui-accordion-header-active,h2.ui-accordion-header-active:hover{background: #ed2a7b;color: white;}
 	.ui-accordion-content {padding: 15px 50px 15px 20px;font-size: 95%;}
 	#welcome img{margin: auto;}
 	#mission {margin-bottom:40px;}
 	#mission u{border-bottom: 1px solid #ed2a7b;color: #ed2a7b;}
-	#pledge, #registration{background: url(images/group-shot.jpg) no-repeat black center top; background-size: cover;color: white;padding: 5%;position: relative;min-height: 70vh;}
+	#pledge, #registration{background: url(images/group-shot.jpg) no-repeat black center top; background-size: cover;color: white;padding: 5%;position: relative;height: 90vh;}
 	#pledge > div{max-height: 70vh;overflow-y: scroll;}
 	.gradient-black{width: 100%;height:150px;position: absolute;bottom: 0;left: 0;
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
@@ -662,45 +669,127 @@ background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
 }
 	#twentyseventeen section > h2{font-size: 74px;text-align: center;}
-	#expect h2 {margin-bottom: 20px;}
-	#expect h2 + div{padding: 40px 10px;border: 1px solid #ccc; border-left: 0; border-right: 0; margin-bottom: -15px;
+	#expect h2 {margin: 5% auto 20px;}
+	#expect h2 + div{padding: 40px 8%;border: 1px solid #ccc; border-left: 0; border-right: 0; margin-bottom: -15px;
 	-webkit-column-count: 2;
        -moz-column-count: 2;
-            column-count: 2;}
-    #welcome h3{text-transform: none;letter-spacing: 0.02em;font-weight: 600;}
+            column-count: 2;column-gap: 43px;}
+    #welcome h3{text-transform: none;letter-spacing: 0.02em;font-size: 22.5px;}
 	#pledge p:first-of-type:first-letter,
 	#welcome p:first-of-type:first-letter,
-	#expect p:first-of-type:first-letter {float: left; margin: 0 4px 0 -4px; font-size: 54px; line-height: .7em; display: block; padding: 0; color: #999; font-family: 'Cinzel', serif;}
+	#expect > div > p:first-of-type:first-letter {float: left; margin: 0 4px 0 -4px; font-size: 54px; line-height: .7em; display: block; padding: 0; color: #999; font-family: 'Cinzel', serif;}
 	#pledge p:first-of-type:first-letter{color: #ed2a7b;}
+	#expect h3{font-family: 'Old Standard TT', serif;font-style: italic;letter-spacing: 0.03em;}
+	#expect .num{border-bottom: 1px solid #000;width: 40px;margin: auto; padding: 9px 0;}
+	#expect .col-md-4{border:1px solid #f4a8a3;padding: 20px 24px 30px;width: 31.8%;margin: 0 .7%;line-height: 1.35; font-size: 12px;overflow: hidden;}
+	#expect h4{color: #ed2a7b;font-size: 13.5px;}
 	#dates {background: url(images/bg-dates.png) no-repeat;background-size: cover;padding-bottom: 4%;}
 	#invest {background: url(images/bg-invest.png) no-repeat;background-size: cover;}
 	#invest h2{background: #ed2a7b;color: white;margin: 0;padding: 25px 0 20px;line-height: .9;}
-	#invest h2 span{border: 1px solid #fff;border-left: 0; border-right: 0; font-size: 23px; padding: 2px 2px 0; font-family: 'Raleway', sans-serif; font-style: normal; letter-spacing: .08em; display: inline-block; vertical-align: super; line-height: 1.3em;margin: 0 -15px;}
+	#invest h2 span,
+	#checklist h2 span{border: 1px solid #fff;border-left: 0; border-right: 0; font-size: 23px; padding: 2px 2px 0; font-family: 'Raleway', sans-serif; font-style: normal; letter-spacing: .08em; display: inline-block; vertical-align: super; line-height: 1.3em;margin: 0 -15px;}
 	#invest h3{font-weight: bold;margin: 20px 0 1px; font-size: 21.1px;}
 	#testimonials2{background: url(images/triangle-pattern.png) repeat;}
 	#testimonials2 h2{background: #000;color: white;margin: 0;padding: 25px 0 10px;}
 	.carousel-linked-nav,
-	.carousel-linked-projects {
-	  display: block;
-	  margin: 0 auto;}
+	.carousel-linked-projects {display: block;margin: 0 auto;}
 	.carousel-linked-nav,
 	.carousel-linked-projects {text-align: center;clear: left;}
-	.carousel-linked-projects { background: #000;padding-bottom: 25px;}
-	#testimonials2 {height:100vh;}
-	#testimonials2 .pagination>li{display: inline-block;}
-	#testimonials2 .pagination>li>a {color:white;border: 1px solid #fff; background: #0000; border-radius: 0; border-left: 0; border-right: 0; text-transform: uppercase; font-family: 'Cinzel', serif; }
-	#testimonials2 .pagination>.active>a {background-color: #ed2a7b;}
+	.carousel-linked-projects { background: #000;padding-bottom: 25px;border-radius: 0;}
+	#testimonials2 .pagination>li{display: inline-block;transform: skew(-25deg);border: 1px solid #fff;border-left: 0; border-right: 0;    margin: 0 4px;}
+	#testimonials2 .pagination>li>a {border:0;color:white;transform: skew(25deg);background: transparent; border-radius: 0;text-transform: uppercase; font-family: 'Cinzel', serif; }
+	#testimonials2 .pagination>.active {background-color: #ed2a7b;border-color: #ed2a7b;}
 	#testimonials2 img.title {margin:45px auto 40px;}
-	#testimonials2 .author {clear: both;color: #856f3c;border-top: 1px solid #856f3c;border-bottom: 1px solid #856f3c;margin-left: 100px;    width: 270px;}
-	#testimonials2 .author img {max-width:83px;height: auto;float: left;margin-right: 7px;}
-	#testimonials2 .author .name {text-transform: uppercase;margin-bottom: 0;}
-	#testimonials2 .author .title {}
+	#testimonials2 .author {clear: both;color: #856f3c;border-top: 1px solid rgba(133, 111, 60, 0.45);border-bottom: 1px solid rgba(133, 111, 60, 0.45);margin-left: 100px;width: 320px;margin: 12px 0 50px 100px;float: left;}
+	#testimonials2 .author img {max-width: 95px;height: auto; float: left; margin:-22px 10px -21px -38px; background: #fff; padding: 13px;}
+	#testimonials2 .author .name { text-transform: uppercase; margin-bottom: 0; padding: 8px 0 0; font-weight: bold; line-height: 1.25; font-size: 15px; letter-spacing: .05em; }
+	#testimonials2 .author .title {margin-bottom: 7px;font-size: 11.5px;}
 	#testimonials2 p.author  {max-width:83px;height: auto;}
 	#myCarousel .carousel-control.left{margin-left: -81px;}
 	#myCarousel .carousel-control.left,
 	#myCarousel .carousel-control.right{background: url(images/nav.png) no-repeat 0 0;width:66px;height:131px;opacity: 1;margin-top: 15%;}
 	#myCarousel .carousel-control.right{background-position: -66px 0;margin-right: -81px;}
-	#registration a{color: white;border-color:white;}
+	#myCarousel img.title{display: none;}
+	#myCarousel img.title.active{display: block;}
+
+	#dates h2 {margin: 0 auto 3%;}
+
+	#checklist{background: url(images/bg-bryiana.jpg) no-repeat 85% top;background-size: contain;padding-bottom: 4%;}
+	#checklist h2 span{border-color: black;position: relative;}
+	#checklist h2 span:before{content: url(images/check.png);position: absolute;top: -11px;left: -10px;height: 50px;}
+	#checklist .pink{background:rgba(238, 44, 125, 0.07);padding: 20px 40px 20px 50px;list-style: none; color: #e84ca2; font-size: 88%;margin: 30px 5% 0 0;}
+	#checklist h2 {margin: 5% 0 4%;}
+	#checklist li{margin: 0 0 7px;text-indent: -12px;}
+/*
+	#checklist ol {counter-reset: item;list-style: none;}
+	#checklist ol li:before {content: '0' counter(item, decimal) '. ';counter-increment: item;}
+*/
+
+	h2.ui-accordion-header span{position: relative;float: right; width: 25px; height: 25px; border: 1px solid white; transform: rotate(-45deg)}
+	h2.ui-accordion-header span:before,
+    h2.ui-accordion-header span:after{content: ""; position: absolute; background-color: white; transition: transform 0.25s ease-out;}
+	/* horizontal line */
+    h2.ui-accordion-header span:after,
+    h2.ui-accordion-header span:before{top: 49%;left: 2px; width: 80%; height: 1px; margin-top: 0px; transform: rotate(45deg);}
+    h2.ui-accordion-header span:hover{cursor: pointer;}
+    /* Vertical line */
+    h2.ui-accordion-header span:before{top: 3px;left: 50%; width: 1px; height: 80%; margin: 0px; transform: rotate(45deg);}
+
+    h2.ui-accordion-header-active span:before{transform: rotate(135deg);top: 3px;left: 44%; }
+    h2.ui-accordion-header-active span:after{ transform: rotate(225deg); }
+
+    #registration{font-family: 'Old Standard TT', serif;font-size: 20px;letter-spacing: 0.02em;}
+    #registration h2 {margin: 20vh auto 5px;}
+    #registration a {color: #fff; border-color: #fff; margin: 30px 10px 0; text-transform: lowercase; font-style: italic; letter-spacing: 0.05em; font-size: 20px; font-weight: normal; padding: 15px 60px; }
+
+	@media(max-width:767px) {
+		#welcome h3 {text-align: center;}
+		#welcome .entry{padding: 20px 0 28px;}
+		#twentyseventeen section > h2 {font-size: 34px;}
+		#mission > div{padding: 0;}
+		#expect h2 { margin: 30px auto 20px;}
+		#expect h2 + div {padding: 30px 8% 15px; margin-bottom: -15px; -webkit-column-count: 1; -moz-column-count: 1; column-count: 1;}
+		#invest div > div{padding: 0;}
+		#expect .col-md-4{width: 48%;margin: 0 .7%;float: left;}
+		#dates img, #invest img{margin: 5px auto 20px;}
+		#testimonials2 .col-md-10{float: left;}
+		#registration {text-align: center !important;font-size: 15px;}
+		#registration a {margin: 14px auto 0; font-size: 17px; padding: 15px 20px; }
+	}
+	@media(max-width:400px) {
+		#expect .col-md-4{width: 100%;margin: 0;}
+		#expect .text-center{text-align: center !important;}
+		#invest h2 span, #checklist h2 span {font-size: 13px;margin: 0 -8px;}
+		#checklist h2 span:before {top: -21px;left: -21px;}
+		#checklist .pink { padding: 20px 15px 20px 30px;margin: 20px 5% 0 0;}
+	}
+
+/* !Scrolling Nav */
+	@media(min-width:767px) {
+		#navbar-menu .arrow{width: 0;height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 7px solid #ed2a7b; position: absolute; top: -58px; left: 11px;}
+ 		#navbar-menu{position: fixed;top:32vh;left:30px;/* background: rgba(0,0,0,.75); */z-index: 10;
+			padding: 10px 0;
+	        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+	        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+	        transition: background .5s ease-in-out,padding .5s ease-in-out;
+		}
+		#navbar-menu h4{text-align: left;padding-left: 30px; transform: rotate(90deg); font-size: 13px; margin: 0; position: absolute; top: -42px; left: -18px;color: #666;}
+		#navbar-menu li{display: block;text-align: left;}
+		#navbar-menu a{color: #848383;padding: 2px 15px 2px 20px;}
+		#navbar-menu a:before {content: ""; display: block; position: relative; border-radius: 10px; width: 12px; height: 12px; transition: all 0.3s ease; float: left; top: 3px; left: -7px; border: 1px solid #b9b7b7; }
+		#navbar-menu li.active>a{color: #ed2a7b;}
+		#navbar-menu li.active>a:before {
+		    background: #ed2a7b;
+			border: 1px solid #ed2a7b;
+		}
+	    #navbar-menu>li.active>a,
+	    #navbar-menu>li.active>a:focus,
+	    #navbar-menu>li.active>a:hover,
+	    .nav>li>a:focus, .nav>li>a:hover {background: transparent;}
+	    .top-nav-collapse {padding: 0;}
+
+	}
+
 
 /* !News */
 	.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover { background-color: #000; border-color: rgba(0, 0, 0, 0); border-radius: 20em; }
